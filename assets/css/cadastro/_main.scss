@@ -1,0 +1,146 @@
+body {
+  width: 100%;
+  height: 100vh;
+
+  main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+    #img-container {
+      width: 50%;
+      height: 100%;
+      margin-left: -23px;
+
+      #img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    #cadastro-container {
+      width: 50%;
+      height: 100%;
+      background-color: $color1;
+
+      #title-container {
+        height: 150px;
+        width: 100%;
+        margin-top: 7%;
+        background-color: #fff;
+
+        #title,
+        #subtitle {
+          font-family: "Poppins", sans-serif;
+          letter-spacing: 0.5px;
+          text-align: center;
+          padding-top: 20px;
+        }
+        #title {
+          color: $color3;
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 30px;
+        }
+
+        #subtitle {
+          color: $color4;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 22px;
+        }
+      }
+
+      #form-container {
+        width: 100%;
+        height: 380px;
+        background-color: $color1;
+
+        form {
+          width: 100%;
+
+          .btn {
+            width: 343px;
+            height: 50px;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+          }
+
+          .input-body {
+            width: 90%;
+            margin-left: 5%;
+            height: 40px;
+            border: solid 1px $color4;
+            border-radius: 5px;
+
+            .icon {
+              font-size: 20px;
+              margin: 10px 7px 0 20px;
+              color: $color4;
+            }
+
+            input {
+              color: $color4;
+              border: none;
+              outline: none;
+            }
+          }
+
+          #btn-container {
+            display: flex;
+            justify-content: center;
+            #button {
+              color: $color1;
+              background-color: $color2;
+              border: none;
+              margin-top: 40px;
+            }
+          }
+
+          #ou {
+            color: #000;
+            text-align: center;
+            margin-top: 40px;
+          }
+
+          #google-login-container {
+            display: flex;
+            justify-content: center;
+            height: 80px;
+            width: 100%;
+            margin-top: 20px;
+
+            #button-google {
+              color: $color4;
+              background-color: $color1;
+              border: solid 1px $color4;
+              font-weight: bold;
+              margin-top: 10px;
+            }
+
+            #google {
+              width: 25px;
+              height: 25px;
+              margin-right: 10px;
+            }
+
+            #google-text {
+              padding: 5px;
+            }
+          }
+
+          #login{
+            font-family: 'Poppins', sans-serif;
+            margin-top: 10px;
+            text-align: center;
+
+            #login-link{
+                font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}

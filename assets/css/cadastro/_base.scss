@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$color1: #fff;
+$color2: #dc9000;
+$color3: #223263;
+$color4: #9098b1;
+$color5: #40bfff;
+
+/* esconder scrollbar no: chrome, safari, edge, opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* esconder scrollbar no: internet explorer*/
+body {
+  -ms-overflow-style: none;
+}
+
+/* esconder scrollbar no: firefox*/
+html {
+  scrollbar-width: none;
+}
+
+a {
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+}

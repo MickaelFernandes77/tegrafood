@@ -1,0 +1,23 @@
+Tegrafood:
+
+Estrutura do Projeto
+
+Desktop:
+1°: Campo de Administrador:
+1° Etapa: Cadastro e Login:
+- Tela de Login de Administrador
+- Tela de Cadastro de Administrador
+
+2° Etapa - Produtos:
+- Menu Lateral(Na esquerda). Com os filtros de produtos por categoria. (Aprender a fazer com o Bootstrap)
+
+- Listagem dos Produtos:
+1° Parte: Acima do campo dos cards -> Um titulo com produtos, e um subtitulo(todos ou categoria do produto), um botão para ordenar os produtos de a-z, e um botão para adicionar produtos.
+
+2° Parte: Cards dos produtos -> Imagens dos produtos, Titulo do produto, Preço do Produto, e Botão de Editar.
+
+- Cadastro de Produtos:
+1° Parte: Um tela com 4 inputs(Nome, categoria, Descrição e Valor do Produto)
+2° Parte: Um campo para adicionar uma imagem(ver como se faz isso, pois não sei.)
+3° Parte: 2 Botões, um de cancelar e outro de cadastrar.
+2°:  Campo de Cliente:

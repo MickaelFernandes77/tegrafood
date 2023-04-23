@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- link bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!--Link do Fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <!-- Link Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main class="container-fluid">
+        <div class="row w-100">
+            <section id="img-container">
+                <img src="../assets/images/cadastro_login.jpg" id="img"
+                    alt="alimentos diversos hamburgueres e batatas fritas">
+            </section>
+
+            <section id="cadastro-container">
+                <div id="title-container">
+                    <h2 id="title">Vamos começar!</h2>
+                    <p id="subtitle">crie uma nova conta</p>
+                </div>
+
+                <div id="form-container">
+                    <form>
+                        <div class="input-body d-flex">
+                            <i class="fa-regular fa-envelope icon"></i>
+                            <input type="text" placeholder="Nome completo" id="nome">
+                        </div>
+                        <br>
+                        <div class="input-body d-flex">
+                            <i class="fa-regular fa-envelope icon"></i>
+                            <input type="email" placeholder="Seu e-mail" id="email">
+                        </div>
+                        <br>
+                        <div class="input-body d-flex">
+                            <i class="fa-solid fa-lock icon"></i>
+                            <input type="password" placeholder="Senha" id="senha">
+                        </div>
+                        <br>
+                        <div class="input-body d-flex">
+                            <i class="fa-solid fa-lock icon"></i>
+                            <input type="password" placeholder="Confirme a senha" id="senha">
+                        </div>
+
+                        <div id="btn-container">
+                            <button type="submit" id="button" class="btn">Cadastrar</button>
+                        </div>
+
+                        <p id="login">Já tem uma conta? <a href="../index.html" id="login-link">Entrar</a></p>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>
