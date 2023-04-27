@@ -1,0 +1,749 @@
+@media (max-width: 375px) {
+  header {
+    display: block;
+
+    nav {
+      width: 100%;
+      height: 100%;
+
+      #btn-menu {
+        display: block;
+      }
+    }
+  }
+
+  #elementsContainer {
+    width: 100%;
+    height: 100%;
+
+    main {
+      width: 100%;
+
+      #userContainer {
+        display: none !important;
+      }
+
+      #sortContainer {
+        height: 120px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        #titleContainer {
+          height: 48px;
+          margin-top: 15px !important;
+
+          #title,
+          #title2 {
+            font-size: 22px;
+            margin-left: -10px;
+            margin-right: 16px;
+          }
+        }
+
+        #azContainer {
+          width: 150px;
+          margin-top: 0;
+          margin-left: -10px;
+
+          #az {
+            font-size: 22px;
+            margin: 25px 15px 0 0;
+          }
+
+          #btnAdd {
+            font-size: 15px;
+            width: 110px;
+            height: 50px;
+            margin-top: 10px;
+          }
+        }
+      }
+
+      #productsContainer {
+        height: 100%;
+        width: 100%;
+
+        .card {
+          height: 380px;
+          margin-top: 15px;
+          margin-bottom: 20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .productImageTitle {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .productImg {
+              width: 90px;
+              height: 90px;
+              border-radius: 50px;
+            }
+
+            .titleDescriptionContainer {
+              display: flex;
+              flex-direction: column;
+
+              .cardTitle {
+                margin: 15px 0 0 0;
+                text-align: center;
+              }
+
+              .cardDescription {
+                text-align: center;
+                margin: 35px 0 0 0;
+              }
+            }
+          }
+
+          .priceContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .price {
+              margin: 0 0 0 0;
+              text-align: center;
+            }
+
+            .btnEdit {
+              width: 150px;
+              height: 45px;
+              margin: 10px 0 30px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  aside {
+    width: 0;
+    display: none;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 425px) {
+  header {
+    display: block;
+
+    nav {
+      width: 100%;
+      height: 100%;
+
+      #btn-menu {
+        display: block;
+      }
+    }
+  }
+
+  #elementsContainer {
+    flex-direction: column;
+    width: 100%;
+
+    main {
+      width: 100%;
+      height: 100%;
+
+      #userContainer {
+        display: none !important;
+      }
+
+      #sortContainer {
+        height: 120px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        #titleContainer {
+          height: 48px;
+          margin-top: 15px !important;
+
+          #title,
+          #title2 {
+            font-size: 22px;
+            margin-left: -10px;
+            margin-right: 16px;
+          }
+        }
+
+        #azContainer {
+          width: 150px;
+          margin-top: 0;
+          margin-left: -10px;
+
+          #az {
+            font-size: 22px;
+            margin: 25px 15px 0 0;
+          }
+
+          #btnAdd {
+            font-size: 15px;
+            width: 110px;
+            height: 50px;
+            margin-top: 10px;
+          }
+        }
+      }
+
+      #productsContainer {
+        height: 100%;
+        width: 100%;
+
+        .card {
+          height: 380px;
+          margin-top: 15px;
+          margin-bottom: 20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .productImageTitle {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .productImg {
+              width: 90px;
+              height: 90px;
+              border-radius: 50px;
+            }
+
+            .titleDescriptionContainer {
+              display: flex;
+              flex-direction: column;
+
+              .cardTitle {
+                margin: 15px 0 0 0;
+                text-align: center;
+              }
+
+              .cardDescription {
+                text-align: center;
+                margin: 35px 0 0 0;
+              }
+            }
+          }
+
+          .priceContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .price {
+              margin: 0 0 0 0;
+              text-align: center;
+            }
+
+            .btnEdit {
+              width: 200px;
+              height: 45px;
+              margin: 10px 0 30px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  aside {
+    width: 0;
+    display: none;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 486px) {
+  header {
+    display: block;
+
+    nav {
+      width: 100%;
+      height: 100%;
+
+      #btn-menu {
+        display: block;
+      }
+    }
+  }
+
+  #elementsContainer {
+    flex-direction: column;
+    width: 100%;
+
+    main {
+      width: 100%;
+      height: 100%;
+
+      #userContainer {
+        display: none !important;
+      }
+
+      #sortContainer {
+        height: 120px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        #titleContainer {
+          height: 48px;
+          margin-top: 15px !important;
+
+          #title,
+          #title2 {
+            font-size: 22px;
+            margin-left: 10px;
+            margin-right: 16px;
+          }
+        }
+
+        #azContainer {
+          width: 150px;
+          margin-top: 0;
+          margin-left: -10px;
+
+          #az {
+            font-size: 22px;
+            margin: 25px 15px 0 0;
+          }
+
+          #btnAdd {
+            font-size: 15px;
+            width: 110px;
+            height: 35px;
+            margin-top: 20px;
+          }
+        }
+      }
+
+      #productsContainer {
+        height: 100%;
+        width: 100%;
+
+        .card {
+          height: 380px;
+          margin-top: 15px;
+          margin-bottom: 20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .productImageTitle {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .productImg {
+              width: 90px;
+              height: 90px;
+              border-radius: 50px;
+            }
+
+            .titleDescriptionContainer {
+              display: flex;
+              flex-direction: column;
+
+              .cardTitle {
+                margin: 15px 0 0 0;
+                text-align: center;
+              }
+
+              .cardDescription {
+                text-align: center;
+                margin: 35px 0 0 0;
+              }
+            }
+          }
+
+          .priceContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .price {
+              margin: 0 0 0 0;
+              text-align: center;
+            }
+
+            .btnEdit {
+              width: 200px;
+              height: 45px;
+              margin: 10px 0 30px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  aside {
+    width: 0;
+    display: none;
+  }
+}
+
+@media (min-width: 486px) and (max-width: 550px) {
+  header {
+    display: block;
+
+    nav {
+      width: 100%;
+      height: 100%;
+
+      #btn-menu {
+        display: block;
+      }
+    }
+  }
+
+  #elementsContainer {
+    flex-direction: column;
+    width: 100%;
+
+    main {
+      width: 100%;
+      height: 100%;
+
+      #userContainer {
+        display: none !important;
+      }
+
+      #sortContainer {
+        height: 120px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        #titleContainer {
+          height: 48px;
+          margin-top: 15px !important;
+
+          #title,
+          #title2 {
+            font-size: 22px;
+            margin-left: 10px;
+            margin-right: 16px;
+          }
+        }
+
+        #azContainer {
+          width: 150px;
+          margin-top: 0;
+          margin-left: -10px;
+
+          #az {
+            font-size: 22px;
+            margin: 25px 15px 0 0;
+          }
+
+          #btnAdd {
+            font-size: 15px;
+            width: 110px;
+            height: 35px;
+            margin-top: 20px;
+          }
+        }
+      }
+
+      #productsContainer {
+        height: 100%;
+        width: 100%;
+
+        .card {
+          height: 180px;
+          margin-top: 20px;
+          margin-bottom: 15px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          .productImageTitle {
+            display: flex;
+            flex-direction: row;
+
+            .productImg {
+              width: 80px;
+              height: 80px;
+              margin-left: -8px;
+              border-radius: 50px;
+            }
+
+            .titleDescriptionContainer {
+              display: flex;
+              flex-direction: column;
+
+              .cardTitle {
+                margin: 15px 0 0 10px;
+              }
+
+              .cardDescription {
+                margin: 10px 0 0 5px;
+              }
+            }
+          }
+
+          .priceContainer {
+            display: flex;
+            flex-direction: column;
+            margin-right: 10px;
+
+            .price {
+              margin: 30px 0 0 0;
+              text-align: center;
+            }
+
+            .btnEdit {
+              width: 100px;
+              height: 40px;
+              margin: 10px 0 30px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  aside {
+    width: 0;
+    display: none;
+  }
+}
+
+@media (min-width: 550px) and (max-width: 575px) {
+  header {
+    display: block;
+
+    nav {
+      width: 100%;
+      height: 100%;
+
+      #btn-menu {
+        display: block;
+      }
+    }
+  }
+
+  #elementsContainer {
+    flex-direction: column;
+    width: 100%;
+
+    main {
+      width: 100%;
+      height: 100%;
+
+      #userContainer {
+        display: none !important;
+      }
+
+      #sortContainer {
+        height: 120px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        #titleContainer {
+          height: 48px;
+          margin-top: 15px !important;
+
+          #title,
+          #title2 {
+            font-size: 22px;
+            margin-left: 10px;
+            margin-right: 16px;
+          }
+        }
+
+        #azContainer {
+          width: 150px;
+          margin-top: 0;
+          margin-left: -10px;
+
+          #az {
+            font-size: 22px;
+            margin: 25px 15px 0 0;
+          }
+
+          #btnAdd {
+            font-size: 15px;
+            width: 110px;
+            height: 35px;
+            margin-top: 20px;
+          }
+        }
+      }
+
+      #productsContainer {
+        height: 100%;
+        width: 100%;
+
+        .card {
+          height: 160px;
+          margin-top: 15px;
+          margin-bottom: 15px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          .productImageTitle {
+            display: flex;
+            flex-direction: row;
+
+            .productImg {
+              width: 80px;
+              height: 80px;
+              margin-left: -8px;
+              border-radius: 50px;
+            }
+
+            .titleDescriptionContainer {
+              display: flex;
+              flex-direction: column;
+
+              .cardTitle {
+                margin: 15px 0 0 10px;
+              }
+
+              .cardDescription {
+                margin: 10px 0 0 5px;
+              }
+            }
+          }
+
+          .priceContainer {
+            display: flex;
+            flex-direction: column;
+            margin-right: 18px;
+
+            .price {
+              margin: 30px 0 0 0;
+              text-align: center;
+            }
+
+            .btnEdit {
+              width: 100px;
+              height: 40px;
+              margin: 10px 0 30px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  aside {
+    width: 0;
+    display: none;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px){
+  #elementsContainer {
+    flex-direction: column;
+    width: 100%;
+
+    main {
+      width: 100%;
+      height: 2100px;
+
+      #sortContainer {
+        height: 120px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        #titleContainer {
+          height: 48px;
+          margin-top: 15px !important;
+
+          #title,
+          #title2 {
+            font-size: 22px;
+            margin-left: 10px;
+            margin-right: 16px;
+          }
+        }
+
+        #azContainer {
+          width: 150px;
+          margin-top: 0;
+          margin-left: -10px;
+
+          #az {
+            font-size: 22px;
+            margin: 25px 15px 0 0;
+          }
+
+          #btnAdd {
+            font-size: 15px;
+            width: 110px;
+            height: 35px;
+            margin-top: 20px;
+          }
+        }
+      }
+
+      #productsContainer {
+        height: 100%;
+        width: 100%;
+
+        .card {
+          height: 160px;
+          margin-top: 25px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          .productImageTitle {
+            display: flex;
+            flex-direction: row;
+
+            .productImg {
+              width: 80px;
+              height: 80px;
+              margin-left: -8px;
+              border-radius: 50px;
+            }
+
+            .titleDescriptionContainer {
+              display: flex;
+              flex-direction: column;
+
+              .cardTitle {
+                margin: 15px 0 0 10px;
+              }
+
+              .cardDescription {
+                margin: 10px 0 0 5px;
+              }
+            }
+          }
+
+          .priceContainer {
+            display: flex;
+            flex-direction: column;
+            margin-right: 18px;
+
+            .price {
+              margin: 30px 0 0 0;
+              text-align: center;
+            }
+
+            .btnEdit {
+              width: 100px;
+              height: 40px;
+              margin: 10px 0 30px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

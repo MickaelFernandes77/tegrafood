@@ -1,0 +1,155 @@
+#elementsContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  main {
+    height: 1950px;
+    width: 78%;
+    background-color: $color1;
+
+    #userContainer {
+      background-color: $color2;
+      height: 70px;
+
+      #interrogation,
+      #bell,
+      #userImage {
+        margin-right: 40px;
+      }
+
+      #interrogation,
+      #bell {
+        font-size: 22px;
+        color: $color1;
+        margin-top: 15px;
+        cursor: pointer;
+      }
+
+      #userImage {
+        width: 50px;
+        height: 50px;
+        margin-top: 10px;
+        border-radius: 50px;
+        background-image: url("../../../images/user.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
+    #sortContainer {
+      height: 120px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      #titleContainer {
+        display: flex;
+        height: 48px;
+        margin-top: 20px;
+
+        #title,
+        #title2 {
+          margin-right: 20px;
+        }
+
+        #title {
+          color: $color3;
+        }
+
+        #title2 {
+          color: $color2;
+          border-bottom: solid 2px $color2;
+          cursor: pointer;
+        }
+      }
+
+      #azContainer {
+        display: flex;
+        height: 80px;
+        width: 170px;
+        margin-top: 40px;
+
+        #az {
+          font-size: 22px;
+          color: $color2;
+          margin: 50px 15px 0 0;
+        }
+
+        #btnAdd {
+          background-color: $color2;
+          height: 40px;
+          color: $color1;
+          font-size: 18px;
+          font-weight: 500;
+          margin-top: 35px;
+        }
+      }
+    }
+
+    #productsContainer {
+      height: 100%;
+
+      .card {
+        height: 140px;
+        margin-top: 25px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border: solid 1px $color4;
+
+        .productImageTitle {
+          display: flex;
+          margin-top: 20px;
+          margin-left: 15px;
+
+          .productImg {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+          }
+
+          .titleDescriptionContainer {
+            display: flex;
+            flex-direction: column;
+
+            .cardTitle {
+              color: $color3;
+              font-weight: bold;
+              margin: 15px 0 0 20px;
+            }
+
+            .cardDescription {
+              color: $color3;
+              margin: 3px 0 0 20px;
+              font-weight: 600;
+            }
+          }
+        }
+
+        .priceContainer {
+          display: flex;
+          flex-direction: column;
+
+          .price {
+            color: $color3;
+            font-size: 22px;
+            font-weight: bold;
+            margin: 30px 35px 0 0;
+            text-align: center;
+          }
+
+          .btnEdit {
+            width: 130px;
+            height: 45px;
+            color: $color1;
+            background-color: $color2;
+            margin: 10px 35px 0 0;
+            font-size: 18px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
