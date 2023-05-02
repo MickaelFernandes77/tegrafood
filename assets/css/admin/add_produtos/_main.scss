@@ -1,0 +1,78 @@
+body {
+  width: 100%;
+  height: 100vh;
+
+  main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: $color6;
+
+    #title {
+      font-family: "Poppins", sans-serif;
+      color: $color2;
+      font-weight: 700;
+      margin-top: 50px;
+    }
+
+    .input {
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      background-color: $color1;
+      margin-top: 35px;
+      padding-left: 10px;
+      height: 45px;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    #nomeProd,
+    #categoria,
+    #descricao {
+      width: 580px;
+    }
+
+    #valor {
+      width: 200px;
+      outline: none;
+    }
+
+    #fileContainer {
+      height: 300px;
+      margin-top: 30px;
+
+      #fileLabel {
+        width: 300px;
+        height: 100%;
+        background-color: $color1;
+        color: $color4;
+        font-family: "Poppins", sans-serif;
+        padding-top: 45%;
+        padding-left: 20%;
+      }
+
+      #file {
+        display: none;
+      }
+    }
+
+    #btnContainer {
+      margin-top: 100px;
+      display: flex;
+      justify-content: end;
+
+      .btn {
+        width: 240px;
+        height: 40px;
+        font-family: "Poppins", sans-serif;
+        color: $color1;
+      }
+
+      #btnCadastrar {
+        background-color: $color2;
+      }
+    }
+  }
+}
