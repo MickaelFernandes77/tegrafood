@@ -1,0 +1,213 @@
+#elementsContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  main {
+    height: 1950px;
+    width: 78%;
+    background-color: $color1;
+
+    #userContainer {
+      background-color: $color2;
+      height: 70px;
+
+      #interrogation,
+      #bell,
+      #cart,
+      #userImage {
+        margin-right: 40px;
+      }
+
+      #interrogation,
+      #bell,
+      #cart {
+        font-size: 22px;
+        color: $color1;
+        margin-top: 15px;
+        cursor: pointer;
+      }
+
+      #userImage {
+        width: 50px;
+        height: 50px;
+        margin-top: 10px;
+        border-radius: 50px;
+        background-image: url("../../../images/user.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
+    #sortContainer,
+    #filterContainer {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      #titleContainer {
+        display: flex;
+        height: 48px;
+        margin-top: 20px;
+
+        #title,
+        #title2 {
+          margin-right: 20px;
+        }
+
+        #title {
+          color: $color3;
+        }
+
+        #title2 {
+          color: $color2;
+          border-bottom: solid 2px $color2;
+          cursor: pointer;
+        }
+      }
+    }
+
+    // Container dos icones de add prod e ordenar prod do main_admin
+    #sortContainer {
+      height: 120px;
+
+      #azContainer {
+        display: flex;
+        height: 80px;
+        width: 170px;
+        margin-top: 40px;
+
+        #az,
+        #filter {
+          font-size: 22px;
+          color: $color2;
+          margin: 50px 15px 0 0;
+        }
+
+        #btnAdd {
+          background-color: $color2;
+          height: 40px;
+          color: $color1;
+          font-size: 18px;
+          font-weight: 500;
+          margin-top: 35px;
+        }
+      }
+    }
+
+    // Container dos icones de filtrar prod e ordenar prod do main_client
+    #filterContainer {
+      height: 90px;
+
+      #azFilterContainer {
+        display: flex;
+        justify-content: space-around;
+        height: 50px;
+        width: 170px;
+        margin-top: 25px;
+
+        #az,
+        #filter {
+          font-size: 22px;
+          color: $color2;
+          margin: 10px 15px 0 0;
+        }
+      }
+    }
+
+    #productsContainer {
+      height: 100%;
+
+      .card {
+        height: 140px;
+        margin-top: 25px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border: solid 1px $color4;
+
+        .productImageTitle {
+          display: flex;
+          margin-top: 20px;
+          margin-left: 15px;
+
+          .productImg {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+          }
+
+          .titleDescriptionContainer {
+            display: flex;
+            flex-direction: column;
+
+            .cardTitle {
+              color: $color3;
+              font-weight: bold;
+              margin: 15px 0 0 20px;
+            }
+
+            .cardDescription {
+              color: $color3;
+              margin: 3px 0 0 20px;
+              font-weight: 600;
+            }
+          }
+        }
+
+        .priceContainer {
+          display: flex;
+          flex-direction: column;
+
+          .price {
+            color: $color3;
+            font-size: 22px;
+            font-weight: bold;
+            margin: 30px 35px 0 0;
+            text-align: center;
+          }
+
+          .btnEdit,
+          .btnPurchase {
+            width: 130px;
+            height: 45px;
+            color: $color1;
+            background-color: $color2;
+            margin: 10px 35px 0 0;
+            font-size: 18px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    #filterModal {
+      .modal-dialog {
+        font-family: "Poppins", sans-serif;
+        .modal-content {
+          background-color: $color1;
+          height: 180px;
+          #modalTitle {
+            margin-top: 20px;
+          }
+
+          .btnFilter,
+          .btnClose {
+            background-color: $color2;
+            color: $color1;
+          }
+          
+          .btnFilter {
+            height: 40px;
+            margin: 10px 0 0 10px;
+          }
+
+          .btnClose {
+            color: $color1;
+            border: none;
+          }
+        }
+      }
+    }
+  }
+}
