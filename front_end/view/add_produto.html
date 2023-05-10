@@ -35,21 +35,22 @@
 
                         <div id="fileContainer">
                             <label for="file" id="fileLabel">Adicione uma imagem</label>
-                            <input id="file" name="file" type="file" placeholder="Adicione uma imagem">
+                            <input type="file" id="file" name="file" accept="image/*" placeholder="Adicione uma imagem">
                         </div>
                     </div>
 
 
                     <div id="btnContainer">
-                        <button class="btn" id="btnCancelar">Cancelar</button>
-                        <button class="btn" id="btnCadastrar">Cadastrar</button>
+                        <a class="btn" id="btnCancelar" onclick="paginaMainAdmin()">Cancelar</a>
+                        <a class="btn" id="btnCadastrar" onclick="cadastrarProduto()">Cadastrar</a>
                     </div>
                 </form>
             </div>
         </section>
     </main>
 
-    <script src="../controller/cadastro_prod.js"></script>
+    <script src="../controller/app.js"></script>
+    <!-- <script src="../controller/cadastro_prod.js"></script> -->
     <!-- link bootstrap js  -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"

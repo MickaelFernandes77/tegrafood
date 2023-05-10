@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/* esconder scrollbar no: chrome, safari, edge, opera */
+::-webkit-scrollbar {
+  display: none; }
+
+/* esconder scrollbar no: internet explorer*/
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  -ms-overflow-style: none; }
+
+/* esconder scrollbar no: firefox*/
+html {
+  scrollbar-width: none; }
+
+a {
+  text-decoration: none;
+  list-style: none;
+  outline: none; }
+
+#elementsContainerCart {
+  display: none;
+  flex-direction: row;
+  width: 100%; }
+  #elementsContainerCart main {
+    height: 1950px;
+    width: 100%;
+    background-color: #fff; }
+    #elementsContainerCart main #userContainer {
+      background-color: #dc9000;
+      height: 70px; }
+      #elementsContainerCart main #userContainer #bell,
+      #elementsContainerCart main #userContainer #shop,
+      #elementsContainerCart main #userContainer #userImage {
+        margin-right: 40px; }
+      #elementsContainerCart main #userContainer #bell,
+      #elementsContainerCart main #userContainer #shop {
+        font-size: 22px;
+        color: #fff;
+        margin-top: 15px;
+        cursor: pointer; }
+      #elementsContainerCart main #userContainer #userImage {
+        width: 50px;
+        height: 50px;
+        margin-top: 10px;
+        border-radius: 50px;
+        background-image: url("../../../images/user.jpg");
+        background-repeat: no-repeat;
+        background-size: cover; }
+    #elementsContainerCart main #titleContainer #title {
+      color: #223263;
+      font-family: "Poppins", sans-serif;
+      font-size: 22px;
+      font-weight: bold;
+      margin: 30px 0 0 10px; }
+    #elementsContainerCart main #cartContainer {
+      height: 100%; }
+      #elementsContainerCart main #cartContainer .card {
+        height: 140px;
+        margin-top: 25px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border: solid 1px #9098b1; }
+        #elementsContainerCart main #cartContainer .card .productImageTitle {
+          display: flex;
+          margin-top: 20px;
+          margin-left: 15px; }
+          #elementsContainerCart main #cartContainer .card .productImageTitle .productImg {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px; }
+          #elementsContainerCart main #cartContainer .card .productImageTitle .titleDescriptionContainer {
+            display: flex;
+            flex-direction: column; }
+            #elementsContainerCart main #cartContainer .card .productImageTitle .titleDescriptionContainer .cardTitle {
+              color: #223263;
+              font-weight: bold;
+              margin: 15px 0 0 20px; }
+            #elementsContainerCart main #cartContainer .card .productImageTitle .titleDescriptionContainer .cardDescription {
+              color: #223263;
+              margin: 3px 0 0 20px;
+              font-weight: 600; }
+        #elementsContainerCart main #cartContainer .card .priceContainer {
+          display: flex;
+          flex-direction: column; }
+          #elementsContainerCart main #cartContainer .card .priceContainer .price {
+            color: #223263;
+            font-size: 22px;
+            font-weight: bold;
+            margin: 30px 35px 0 0;
+            text-align: center; }
+          #elementsContainerCart main #cartContainer .card .priceContainer .btnEdit,
+          #elementsContainerCart main #cartContainer .card .priceContainer .btnPurchase,
+          #elementsContainerCart main #cartContainer .card .priceContainer .selectQuantity,
+          #elementsContainerCart main #cartContainer .card .priceContainer .confirmProduct {
+            width: 130px;
+            height: 45px;
+            color: #fff;
+            background-color: #dc9000;
+            margin: 10px 35px 0 0;
+            font-size: 18px;
+            font-weight: 600; }
+    #elementsContainerCart main #discountContainer {
+      height: 80px;
+      width: 45%;
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      border: solid 1px #9098b1;
+      border-radius: 5px;
+      font-family: "Poppins", sans-serif; }
+      #elementsContainerCart main #discountContainer #discountTitle {
+        color: #223263;
+        font-weight: 600;
+        font-size: 18px;
+        width: 40%;
+        margin: 30px 0 0 0; }
+      #elementsContainerCart main #discountContainer #discountInputContainer {
+        display: flex;
+        height: 100%;
+        margin-right: 10px; }
+        #elementsContainerCart main #discountContainer #discountInputContainer #discountInput {
+          height: 40px;
+          width: 270px;
+          margin-top: 20px;
+          border: solid 1px #9098b1;
+          border-radius: 5px; }
+        #elementsContainerCart main #discountContainer #discountInputContainer #discountBtn {
+          height: 40px;
+          color: #fff;
+          background-color: #dc9000;
+          position: absolute;
+          margin-top: 20px;
+          margin-left: 170px; }
+
+header {
+  width: 100%;
+  background-color: #dc9000;
+  font-family: "Poppins", sans-serif;
+  display: none; }
+  header nav {
+    width: 100%;
+    height: 100%; }
+    header nav #btn-menu {
+      display: none;
+      margin: 10px 0 0 20px; }
+    header nav .nav-link {
+      color: #fff;
+      margin-left: 20px; }
+    header nav a {
+      text-decoration: none; }
+  header #userContainerResponsive {
+    background-color: #dc9000;
+    height: 70px; }
+    header #userContainerResponsive #interrogation,
+    header #userContainerResponsive #bell,
+    header #userContainerResponsive #userImage {
+      margin-right: 10px; }
+    header #userContainerResponsive #interrogation,
+    header #userContainerResponsive #bell {
+      font-size: 22px;
+      color: #fff;
+      margin-top: 15px;
+      cursor: pointer; }
+    header #userContainerResponsive #userImage {
+      width: 50px;
+      height: 50px;
+      margin-top: 10px;
+      border-radius: 50px;
+      background-image: url("../../../images/user.jpg");
+      background-repeat: no-repeat;
+      background-size: cover; }
+
+/*# sourceMappingURL=style_inicio.css.map */

@@ -8,6 +8,7 @@
     <title>Início Cliente</title>
     <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/admin/inicio/style_inicio.css">
+    <link rel="stylesheet" href="../assets/css/admin/carrinho/style_inicio.css">
     <!-- link bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -19,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
-<body onload="criaCardProduto('todos')">
+<body onload="carregaListaProdutos('todos')">
     <header>
         <section class="d-flex">
             <nav class="navbar navbar-expand-sm d-flex justify-content-between">
@@ -100,7 +101,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <section class="col-12 d-flex justify-content-end" id="userContainer">
-                        <p id="cart"><i class="fa-solid fa-cart-shopping"></i></p>
+                        <p id="cart" onclick="abrirTelaCarrinho()"><i class="fa-solid fa-cart-shopping"></i></p>
                         <p id="bell"><i class="fa-solid fa-bell"></i></p>
                         <div id="userImage">
                         </div>
@@ -136,7 +137,8 @@
                         <div class="d-flex justify-content-around">
                             <h1 class="modal-title fs-5" id="modalTitle">Filtrar Por Preço:</h1>
                         </div>
-                        <div class="modal-body d-flex justify-content-center">
+
+                        <div class="modal-body">
                             <button class="btn btnFilter" data-bs-toggle="modal" data-bs-target="#filterModal"
                                 onclick="filtraProdutos(5, 25)">R$5 à R$25</button>
                             <button class="btn btnFilter" data-bs-toggle="modal" data-bs-target="#filterModal"
@@ -144,6 +146,7 @@
                             <button class="btn btnFilter" data-bs-toggle="modal" data-bs-target="#filterModal"
                                 onclick="filtraProdutos(46, 0)">R$46 ou mais</button>
                         </div>
+
                         <button class="btnClose" data-bs-dismiss="modal">Fechar</button>
                     </div>
                 </div>
@@ -151,7 +154,61 @@
         </main>
     </section>
 
+    <section id="elementsContainerCart">
+        <main>
+            <div class="container-fluid">
+                <div class="row">
+                    <section class="col-12 d-flex justify-content-end" id="userContainer">
+                        <p id="shop" onclick="fecharTelaCarrinho()"><i class="fa-solid fa-shop"></i></p>
+                        <p id="bell"><i class="fa-solid fa-bell"></i></p>
+                        <div id="userImage">
+                        </div>
+                    </section>
+                </div>
+
+                <div class="row">
+                    <section id="titleContainer">
+                        <h2 id="title">Meu Carrinho</h2>
+                    </section>
+                </div>
+
+                <div class="row">
+                    <section id="cartContainer">
+                        <!-- <div style="height: 150px; width: 80%; margin-top: 30px; border: solid 1px #000;">Lorem ipsum
+                            dolor sit amet consectetur adipisicing elit. Similique placeat ea in enim itaque quisquam ex
+                            reiciendis quod fugiat excepturi, cupiditate, facere voluptatibus possimus deserunt iure
+                            commodi minus nulla ipsa!</div>
+                        <div style="height: 150px; width: 80%; margin-top: 30px; border: solid 1px #000;">Lorem ipsum
+                            dolor sit amet consectetur adipisicing elit. Similique placeat ea in enim itaque quisquam ex
+                            reiciendis quod fugiat excepturi, cupiditate, facere voluptatibus possimus deserunt iure
+                            commodi minus nulla ipsa!</div> -->
+                    </section>
+                </div>
+
+                <div class="row">
+                    <div class="d-flex">
+                        <section id="discountContainer">
+                            <h4 id="discountTitle" style="border: none;">Cupom de Desconto</h4>
+                            <div id="discountInputContainer">
+                                <input type="text" id="discountInput">
+                                <button class="btn" id="discountBtn">Adicionar</button>
+                            </div>
+                        </section>
+
+                        <section id="paymentContainer">
+                        </section>
+                    </div>
+
+                    <section id="closePurchaseContainer" class="d-none">
+                        <button>Escolher Mais</button><button>Fechar Pedido</button>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </section>
+
     <script src="../controller/products_client.js"></script>
+    <!-- <script src="../controller/products_client.js"></script> -->
     <!-- link bootstrap js  -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"

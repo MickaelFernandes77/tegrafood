@@ -111,6 +111,7 @@
           font-size: 22px;
           color: $color2;
           margin: 10px 15px 0 0;
+          text-decoration: none;
         }
       }
     }
@@ -191,19 +192,21 @@
             margin-top: 20px;
           }
 
-          .btnFilter,
-          .btnClose {
-            background-color: $color2;
-            color: $color1;
-          }
-          
-          .btnFilter {
-            height: 40px;
-            margin: 10px 0 0 10px;
+          .modal-body {
+            display: flex;
+            justify-content: center;
+
+            .btnFilter {
+              height: 40px;
+              margin: 10px 0 0 10px;
+              background-color: $color2;
+              color: $color1;
+            }
           }
 
           .btnClose {
             color: $color1;
+            background-color: $color2;
             border: none;
           }
         }
@@ -211,3 +214,4 @@
     }
   }
 }
+

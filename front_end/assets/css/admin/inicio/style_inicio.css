@@ -139,7 +139,8 @@ body #elementsContainer {
         #elementsContainer main #filterContainer #azFilterContainer #filter {
           font-size: 22px;
           color: #dc9000;
-          margin: 10px 15px 0 0; }
+          margin: 10px 15px 0 0;
+          text-decoration: none; }
     #elementsContainer main #productsContainer {
       height: 100%; }
       #elementsContainer main #productsContainer .card {
@@ -193,15 +194,17 @@ body #elementsContainer {
         height: 180px; }
         #elementsContainer main #filterModal .modal-dialog .modal-content #modalTitle {
           margin-top: 20px; }
-        #elementsContainer main #filterModal .modal-dialog .modal-content .btnFilter,
-        #elementsContainer main #filterModal .modal-dialog .modal-content .btnClose {
-          background-color: #dc9000;
-          color: #fff; }
-        #elementsContainer main #filterModal .modal-dialog .modal-content .btnFilter {
-          height: 40px;
-          margin: 10px 0 0 10px; }
+        #elementsContainer main #filterModal .modal-dialog .modal-content .modal-body {
+          display: flex;
+          justify-content: center; }
+          #elementsContainer main #filterModal .modal-dialog .modal-content .modal-body .btnFilter {
+            height: 40px;
+            margin: 10px 0 0 10px;
+            background-color: #dc9000;
+            color: #fff; }
         #elementsContainer main #filterModal .modal-dialog .modal-content .btnClose {
           color: #fff;
+          background-color: #dc9000;
           border: none; }
 
 header {
@@ -286,11 +289,7 @@ header {
       #elementsContainer main #filterContainer {
         height: 90px; }
         #elementsContainer main #filterContainer #azFilterContainer {
-          justify-content: center;
-          margin-top: 18px; }
-          #elementsContainer main #filterContainer #azFilterContainer #az,
-          #elementsContainer main #filterContainer #azFilterContainer #filter {
-            margin: 15px 0 0 20px; }
+          justify-content: center; }
       #elementsContainer main #productsContainer {
         height: 100%;
         width: 100%; }
@@ -331,13 +330,17 @@ header {
               width: 150px;
               height: 45px;
               margin: 10px 0 30px 0; }
-      #elementsContainer main #filterModal .modal-dialog .modal-content {
-        height: 200px; }
-        #elementsContainer main #filterModal .modal-dialog .modal-content #modalTitle {
-          margin-top: 25px; }
-        #elementsContainer main #filterModal .modal-dialog .modal-content .btnFilter {
-          height: 80px;
-          margin: 10px 0 0 10px; }
+      #elementsContainer main #filterModal .modal-dialog {
+        font-family: "Poppins", sans-serif; }
+        #elementsContainer main #filterModal .modal-dialog .modal-content {
+          background-color: #fff;
+          height: 300px; }
+          #elementsContainer main #filterModal .modal-dialog .modal-content #modalTitle {
+            margin-top: 20px; }
+          #elementsContainer main #filterModal .modal-dialog .modal-content .modal-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; }
 
   aside {
     width: 0;
@@ -387,11 +390,10 @@ header {
       #elementsContainer main #filterContainer {
         height: 90px; }
         #elementsContainer main #filterContainer #azFilterContainer {
-          justify-content: center;
-          margin-top: 18px; }
+          justify-content: center; }
           #elementsContainer main #filterContainer #azFilterContainer #az,
           #elementsContainer main #filterContainer #azFilterContainer #filter {
-            margin: 15px 0 0 20px; }
+            margin: 10px 0 0 25px; }
       #elementsContainer main #productsContainer {
         height: 100%;
         width: 100%; }
@@ -432,13 +434,15 @@ header {
               width: 200px;
               height: 45px;
               margin: 10px 0 30px 0; }
-      #elementsContainer main #filterModal .modal-dialog .modal-content {
-        height: 200px; }
-        #elementsContainer main #filterModal .modal-dialog .modal-content #modalTitle {
-          margin-top: 25px; }
-        #elementsContainer main #filterModal .modal-dialog .modal-content .btnFilter {
-          height: 60px;
-          margin: 10px 0 0 10px; }
+      #elementsContainer main #filterModal .modal-dialog {
+        font-family: "Poppins", sans-serif; }
+        #elementsContainer main #filterModal .modal-dialog .modal-content {
+          background-color: #fff;
+          height: 300px; }
+          #elementsContainer main #filterModal .modal-dialog .modal-content .modal-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; }
 
   aside {
     width: 0;
@@ -488,11 +492,10 @@ header {
       #elementsContainer main #filterContainer {
         height: 90px; }
         #elementsContainer main #filterContainer #azFilterContainer {
-          justify-content: center;
-          margin-top: 18px; }
+          justify-content: center; }
           #elementsContainer main #filterContainer #azFilterContainer #az,
           #elementsContainer main #filterContainer #azFilterContainer #filter {
-            margin: 15px 0 0 20px; }
+            margin: 10px 0 0 25px; }
       #elementsContainer main #productsContainer {
         height: 100%;
         width: 100%; }
@@ -533,13 +536,15 @@ header {
               width: 200px;
               height: 45px;
               margin: 10px 0 30px 0; }
-      #elementsContainer main #filterModal .modal-dialog .modal-content {
-        height: 175px; }
-        #elementsContainer main #filterModal .modal-dialog .modal-content #modalTitle {
-          margin-top: 25px; }
-        #elementsContainer main #filterModal .modal-dialog .modal-content .btnFilter {
-          height: 40px;
-          margin: 10px 0 0 10px; }
+      #elementsContainer main #filterModal .modal-dialog {
+        font-family: "Poppins", sans-serif; }
+        #elementsContainer main #filterModal .modal-dialog .modal-content {
+          background-color: #fff;
+          height: 300px; }
+          #elementsContainer main #filterModal .modal-dialog .modal-content .modal-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; }
 
   aside {
     width: 0;
@@ -589,58 +594,55 @@ header {
       #elementsContainer main #filterContainer {
         height: 90px; }
         #elementsContainer main #filterContainer #azFilterContainer {
-          justify-content: center;
-          margin-top: 18px; }
+          justify-content: center; }
           #elementsContainer main #filterContainer #azFilterContainer #az,
           #elementsContainer main #filterContainer #azFilterContainer #filter {
-            margin: 15px 0 0 20px; }
+            margin: 10px 0 0 25px; }
       #elementsContainer main #productsContainer {
         height: 100%;
         width: 100%; }
         #elementsContainer main #productsContainer .card {
-          height: 380px;
-          margin-top: 15px;
-          margin-bottom: 20px;
+          height: 180px;
+          margin-top: 20px;
+          margin-bottom: 15px;
           display: flex;
-          flex-direction: column;
+          flex-direction: row;
           justify-content: space-between; }
           #elementsContainer main #productsContainer .card .productImageTitle {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center; }
+            flex-direction: row; }
             #elementsContainer main #productsContainer .card .productImageTitle .productImg {
-              width: 90px;
-              height: 90px;
+              width: 80px;
+              height: 80px;
+              margin-left: -8px;
               border-radius: 50px; }
             #elementsContainer main #productsContainer .card .productImageTitle .titleDescriptionContainer {
               display: flex;
               flex-direction: column; }
               #elementsContainer main #productsContainer .card .productImageTitle .titleDescriptionContainer .cardTitle {
-                margin: 15px 0 0 0;
-                text-align: center; }
+                margin: 15px 0 0 10px; }
               #elementsContainer main #productsContainer .card .productImageTitle .titleDescriptionContainer .cardDescription {
-                text-align: center;
-                margin: 35px 0 0 0; }
+                margin: 10px 0 0 5px; }
           #elementsContainer main #productsContainer .card .priceContainer {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center; }
+            margin-right: 10px; }
             #elementsContainer main #productsContainer .card .priceContainer .price {
-              margin: 0 0 0 0;
+              margin: 30px 0 0 0;
               text-align: center; }
             #elementsContainer main #productsContainer .card .priceContainer .btnEdit {
-              width: 250px;
-              height: 45px;
+              width: 100px;
+              height: 40px;
               margin: 10px 0 30px 0; }
-      #elementsContainer main #filterModal .modal-dialog .modal-content {
-        height: 175px; }
-        #elementsContainer main #filterModal .modal-dialog .modal-content #modalTitle {
-          margin-top: 25px; }
-        #elementsContainer main #filterModal .modal-dialog .modal-content .btnFilter {
-          height: 40px;
-          margin: 10px 0 0 10px; }
+      #elementsContainer main #filterModal .modal-dialog {
+        font-family: "Poppins", sans-serif; }
+        #elementsContainer main #filterModal .modal-dialog .modal-content {
+          background-color: #fff;
+          height: 300px; }
+          #elementsContainer main #filterModal .modal-dialog .modal-content .modal-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; }
 
   aside {
     width: 0;
@@ -690,108 +692,17 @@ header {
       #elementsContainer main #filterContainer {
         height: 90px; }
         #elementsContainer main #filterContainer #azFilterContainer {
-          justify-content: center;
-          margin-top: 18px; }
+          justify-content: center; }
           #elementsContainer main #filterContainer #azFilterContainer #az,
           #elementsContainer main #filterContainer #azFilterContainer #filter {
-            margin: 15px 0 0 20px; }
+            margin: 10px 0 0 25px; }
       #elementsContainer main #productsContainer {
         height: 100%;
         width: 100%; }
         #elementsContainer main #productsContainer .card {
-          height: 380px;
+          height: 160px;
           margin-top: 15px;
-          margin-bottom: 20px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between; }
-          #elementsContainer main #productsContainer .card .productImageTitle {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center; }
-            #elementsContainer main #productsContainer .card .productImageTitle .productImg {
-              width: 90px;
-              height: 90px;
-              border-radius: 50px; }
-            #elementsContainer main #productsContainer .card .productImageTitle .titleDescriptionContainer {
-              display: flex;
-              flex-direction: column; }
-              #elementsContainer main #productsContainer .card .productImageTitle .titleDescriptionContainer .cardTitle {
-                margin: 15px 0 0 0;
-                text-align: center; }
-              #elementsContainer main #productsContainer .card .productImageTitle .titleDescriptionContainer .cardDescription {
-                text-align: center;
-                margin: 35px 0 0 0; }
-          #elementsContainer main #productsContainer .card .priceContainer {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center; }
-            #elementsContainer main #productsContainer .card .priceContainer .price {
-              margin: 0 0 0 0;
-              text-align: center; }
-            #elementsContainer main #productsContainer .card .priceContainer .btnEdit {
-              width: 280px;
-              height: 45px;
-              margin: 10px 0 30px 0; }
-      #elementsContainer main #filterModal .modal-dialog .modal-content {
-        height: 175px; }
-        #elementsContainer main #filterModal .modal-dialog .modal-content #modalTitle {
-          margin-top: 25px; }
-        #elementsContainer main #filterModal .modal-dialog .modal-content .btnFilter {
-          height: 40px;
-          margin: 10px 0 0 10px; }
-
-  aside {
-    width: 0;
-    display: none; } }
-@media (min-width: 576px) and (max-width: 768px) {
-  #elementsContainer {
-    flex-direction: column;
-    width: 100%; }
-    #elementsContainer main {
-      width: 100%;
-      height: 100%; }
-      #elementsContainer main #sortContainer {
-        height: 120px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between; }
-        #elementsContainer main #sortContainer #titleContainer {
-          height: 48px;
-          margin-top: 15px !important; }
-          #elementsContainer main #sortContainer #titleContainer #title,
-          #elementsContainer main #sortContainer #titleContainer #title2 {
-            font-size: 22px;
-            margin-left: 10px;
-            margin-right: 16px; }
-        #elementsContainer main #sortContainer #azContainer {
-          width: 150px;
-          margin-top: 0;
-          margin-left: -10px; }
-          #elementsContainer main #sortContainer #azContainer #az {
-            font-size: 22px;
-            margin: 25px 15px 0 0; }
-          #elementsContainer main #sortContainer #azContainer #btnAdd {
-            font-size: 15px;
-            width: 110px;
-            height: 35px;
-            margin-top: 20px; }
-      #elementsContainer main #filterContainer {
-        height: 90px; }
-        #elementsContainer main #filterContainer #azFilterContainer {
-          justify-content: center;
-          margin-top: 18px; }
-          #elementsContainer main #filterContainer #azFilterContainer #az,
-          #elementsContainer main #filterContainer #azFilterContainer #filter {
-            margin: 15px 0 0 35px; }
-      #elementsContainer main #productsContainer {
-        height: 2150px;
-        width: 100%; }
-        #elementsContainer main #productsContainer .card {
-          height: 180px;
-          margin: 25px 0 20px 0;
+          margin-bottom: 15px;
           display: flex;
           flex-direction: row;
           justify-content: space-between; }
@@ -820,6 +731,86 @@ header {
             #elementsContainer main #productsContainer .card .priceContainer .btnEdit {
               width: 100px;
               height: 40px;
-              margin: 10px 0 30px 10px; } }
+              margin: 10px 0 30px 0; }
+      #elementsContainer main #filterModal .modal-dialog {
+        font-family: "Poppins", sans-serif; }
+        #elementsContainer main #filterModal .modal-dialog .modal-content {
+          background-color: #fff;
+          height: 300px; }
+          #elementsContainer main #filterModal .modal-dialog .modal-content .modal-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; }
+
+  aside {
+    width: 0;
+    display: none; } }
+@media (min-width: 576px) and (max-width: 768px) {
+  #elementsContainer {
+    flex-direction: column;
+    width: 100%; }
+    #elementsContainer main {
+      width: 100%;
+      height: 2100px; }
+      #elementsContainer main #sortContainer {
+        height: 120px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between; }
+        #elementsContainer main #sortContainer #titleContainer {
+          height: 48px;
+          margin-top: 15px !important; }
+          #elementsContainer main #sortContainer #titleContainer #title,
+          #elementsContainer main #sortContainer #titleContainer #title2 {
+            font-size: 22px;
+            margin-left: 10px;
+            margin-right: 16px; }
+        #elementsContainer main #sortContainer #azContainer {
+          width: 150px;
+          margin-top: 0;
+          margin-left: -10px; }
+          #elementsContainer main #sortContainer #azContainer #az {
+            font-size: 22px;
+            margin: 25px 15px 0 0; }
+          #elementsContainer main #sortContainer #azContainer #btnAdd {
+            font-size: 15px;
+            width: 110px;
+            height: 35px;
+            margin-top: 20px; }
+      #elementsContainer main #productsContainer {
+        height: 100%;
+        width: 100%; }
+        #elementsContainer main #productsContainer .card {
+          height: 160px;
+          margin-top: 25px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between; }
+          #elementsContainer main #productsContainer .card .productImageTitle {
+            display: flex;
+            flex-direction: row; }
+            #elementsContainer main #productsContainer .card .productImageTitle .productImg {
+              width: 80px;
+              height: 80px;
+              margin-left: -8px;
+              border-radius: 50px; }
+            #elementsContainer main #productsContainer .card .productImageTitle .titleDescriptionContainer {
+              display: flex;
+              flex-direction: column; }
+              #elementsContainer main #productsContainer .card .productImageTitle .titleDescriptionContainer .cardTitle {
+                margin: 15px 0 0 10px; }
+              #elementsContainer main #productsContainer .card .productImageTitle .titleDescriptionContainer .cardDescription {
+                margin: 10px 0 0 5px; }
+          #elementsContainer main #productsContainer .card .priceContainer {
+            display: flex;
+            flex-direction: column;
+            margin-right: 18px; }
+            #elementsContainer main #productsContainer .card .priceContainer .price {
+              margin: 30px 0 0 0;
+              text-align: center; }
+            #elementsContainer main #productsContainer .card .priceContainer .btnEdit {
+              width: 100px;
+              height: 40px;
+              margin: 10px 0 30px 0; } }
 
 /*# sourceMappingURL=style_inicio.css.map */

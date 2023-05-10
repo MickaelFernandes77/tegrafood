@@ -1,0 +1,54 @@
+header {
+  width: 100%;
+  background-color: $color2;
+  font-family: "Poppins", sans-serif;
+  display: none;
+
+  nav {
+    width: 100%;
+    height: 100%;
+
+    #btn-menu {
+      display: none;
+      margin: 10px 0 0 20px;
+    }
+
+    .nav-link {
+      color: $color1;
+      margin-left: 20px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  #userContainerResponsive {
+    background-color: $color2;
+    height: 70px;
+
+    #interrogation,
+    #bell,
+    #userImage {
+      margin-right: 10px;
+    }
+
+    #interrogation,
+    #bell {
+      font-size: 22px;
+      color: $color1;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+
+    #userImage {
+      width: 50px;
+      height: 50px;
+      margin-top: 10px;
+      border-radius: 50px;
+      background-image: url("../../../images/user.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
