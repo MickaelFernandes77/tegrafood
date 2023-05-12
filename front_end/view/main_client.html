@@ -174,28 +174,40 @@
 
                 <div class="row">
                     <section id="cartContainer">
-                        <!-- <div style="height: 150px; width: 80%; margin-top: 30px; border: solid 1px #000;">Lorem ipsum
-                            dolor sit amet consectetur adipisicing elit. Similique placeat ea in enim itaque quisquam ex
-                            reiciendis quod fugiat excepturi, cupiditate, facere voluptatibus possimus deserunt iure
-                            commodi minus nulla ipsa!</div>
-                        <div style="height: 150px; width: 80%; margin-top: 30px; border: solid 1px #000;">Lorem ipsum
-                            dolor sit amet consectetur adipisicing elit. Similique placeat ea in enim itaque quisquam ex
-                            reiciendis quod fugiat excepturi, cupiditate, facere voluptatibus possimus deserunt iure
-                            commodi minus nulla ipsa!</div> -->
+                        <p id="textCart">Seu carrinho está vazio. <br><br> <a href="#" id="addProd" onclick="fecharTelaCarrinho()">Adicionar
+                                Produtos</a></p>
                     </section>
                 </div>
 
                 <div class="row">
-                    <div class="d-flex">
+                    <div id="discountPaymentContainer">
                         <section id="discountContainer">
                             <h4 id="discountTitle" style="border: none;">Cupom de Desconto</h4>
                             <div id="discountInputContainer">
-                                <input type="text" id="discountInput">
+                                <select name="#" id="discountInput">
+                                    <option value="">Selecione o Cupom</option>
+                                    <option value="1">Cupom 1 (5%)</option>
+                                    <option value="2">Cupom 2 (10%)</option>
+                                    <option value="3">Cupom 3 (15%)</option>
+                                </select>
+
                                 <button class="btn" id="discountBtn">Adicionar</button>
                             </div>
                         </section>
 
                         <section id="paymentContainer">
+                            <table class="table" id="paymentTable">
+                                <tbody>
+                                    <tr>
+                                        <td>Subtotal</td>
+                                        <td id="subtotal"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Total</td>
+                                        <td id="total"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </section>
                     </div>
 

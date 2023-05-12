@@ -8,7 +8,7 @@ let btnAdd = document.getElementById("btnAdd");
 let btnCadastro = document.getElementById("btnCadastrar");
 let btnCancelar = document.getElementById("btnCancelar");
 let az = document.getElementById("az");
-// Itens do Menu
+// Itens do Menu Lateral
 let todos = document.getElementById("todos");
 let pizza = document.getElementById("pizza");
 let sobremesa = document.getElementById("sobremesa");
@@ -21,7 +21,16 @@ let card = "todos";
 let produtos = [];
 // Array dos produtos que vão para a tela de carrinho
 let cart = [];
-let precoFinal = [];
+let precosProdArray = [];
+// Elementos do total os produtos
+let textCart = document.getElementById("textCart");
+let paymentTable = document.getElementById("paymentTable");
+let subtotal = document.getElementById("subtotal");
+let totalCampo = document.getElementById("total");
+let discountPaymentContainer = document.getElementById(
+  "discountPaymentContainer"
+);
+let discountInput = document.getElementById("discountInput");
 
 // Classe produto
 class Produto {
@@ -178,32 +187,6 @@ az.addEventListener("click", function (e) {
   ordenaProdutos();
 });
 
-// Funções de funcionalidade do LocalStorage
-// function cadastrarProduto() {
-//   let nomeProd = document.getElementById("nomeProd");
-//   let categoria = document.getElementById("categoria");
-//   let descricao = document.getElementById("descricao");
-//   let valor = document.getElementById("valor");
-//   let file = document.getElementById("file");
-
-//   //Instancia da classe produto
-//   let produto = new Produto(
-//     nomeProd.value,
-//     categoria.value.toLowerCase(),
-//     descricao.value,
-//     valor.value,
-//     file.value
-//   );
-
-//   if (produto.validarDados()) {
-//     bd.gravar(produto);
-//     alert("Produto Inserido com Sucesso");
-//     window.location.reload();
-//   } else {
-//     alert("Campos não foram devidamente preenchidos");
-//   }
-// }
-
 function carregaListaProdutos(categoria) {
   // Limpando a exibição dos produtos
   productsContainer.innerHTML = "";
@@ -253,6 +236,7 @@ function carregaListaProdutos(categoria) {
     card.appendChild(productImageTitle);
     card.appendChild(priceContainer);
 
+    // Função que adiciona os produtos no carrinho
     buttonComprar.addEventListener("click", function (e) {
       let compraObj = {
         file: "../assets/images/" + produtos[i].file.substring(12),
@@ -301,7 +285,7 @@ function filtraProdutos(n1, n2) {
     let cardTitle = document.createElement("h3");
     let cardDescription = document.createElement("p");
     let productPrice = document.createElement("p");
-    let buttonEdit = document.createElement("button");
+    let buttonComprar = document.createElement("button");
     // Adicionando classes aos elementos
     card.classList.add("card");
     productImageTitle.classList.add("productImageTitle");
@@ -311,8 +295,8 @@ function filtraProdutos(n1, n2) {
     cardTitle.classList.add("cardTitle");
     cardDescription.classList.add("cardDescription");
     productPrice.classList.add("price");
-    buttonEdit.classList.add("btn");
-    buttonEdit.classList.add("btnEdit");
+    buttonComprar.classList.add("btn");
+    buttonComprar.classList.add("btnPurchase");
     // Adicionando conteudo nos elementos
     var title = document.createTextNode(produtos[i].nomeProd);
     var description = document.createTextNode(produtos[i].descricao);
@@ -324,16 +308,31 @@ function filtraProdutos(n1, n2) {
     cardTitle.appendChild(title);
     cardDescription.appendChild(description);
     productPrice.appendChild(price);
-    buttonEdit.appendChild(buttonText);
+    buttonComprar.appendChild(buttonText);
     // Adicionando elementos no card
     titleDescriptionContainer.appendChild(cardTitle);
     titleDescriptionContainer.appendChild(cardDescription);
     productImageTitle.appendChild(productImg);
     productImageTitle.appendChild(titleDescriptionContainer);
     priceContainer.appendChild(productPrice);
-    priceContainer.appendChild(buttonEdit);
+    priceContainer.appendChild(buttonComprar);
     card.appendChild(productImageTitle);
     card.appendChild(priceContainer);
+
+    // Função que adiciona os produtos no carrinho
+    buttonComprar.addEventListener("click", function (e) {
+      let compraObj = {
+        file: "../assets/images/" + produtos[i].file.substring(12),
+        nomeProd: produtos[i].nomeProd,
+        descricao: produtos[i].descricao,
+        valor: produtos[i].valor,
+        categoria: produtos[i].categoria,
+      };
+
+      cart.push(compraObj);
+      adicionaProdutoNoCarrinho(cart);
+      alert("Produto Adicionado no Carrinho");
+    });
 
     if (n2 == 0) {
       if (produtos[i].valor >= n1) {
@@ -361,7 +360,10 @@ function filtraProdutos(n1, n2) {
 function adicionaProdutoNoCarrinho(array) {
   let arrayCarrinho = array;
   cartContainer.innerHTML = "";
-  let valorQuantidade = 0;
+  let valorTotal = 0;
+  let valorFinal = 0;
+  let valorDesconto = 0;
+  let valorFinalDescontado = 0;
 
   for (let i = 0; i < arrayCarrinho.length; i++) {
     // Containers
@@ -385,6 +387,7 @@ function adicionaProdutoNoCarrinho(array) {
     var option7 = document.createElement("option");
     var option8 = document.createElement("option");
     var option9 = document.createElement("option");
+    let trash = document.createElement("p");
     // Adicionando classes aos elementos
     card.classList.add("card");
     productImageTitle.classList.add("productImageTitle");
@@ -396,6 +399,9 @@ function adicionaProdutoNoCarrinho(array) {
     productPrice.classList.add("price");
     selectQuantity.classList.add("btn");
     selectQuantity.classList.add("selectQuantity");
+    trash.classList.add("trash");
+    trash.classList.add("fa-solid");
+    trash.classList.add("fa-trash");
     // Adicionando conteudo nos elementos
     var title = document.createTextNode(arrayCarrinho[i].nomeProd);
     var description = document.createTextNode(arrayCarrinho[i].descricao);
@@ -446,27 +452,68 @@ function adicionaProdutoNoCarrinho(array) {
     selectQuantity.appendChild(option9);
     card.appendChild(productImageTitle);
     card.appendChild(priceContainer);
-    // Adicionando card na tela
+    // Adicionando card e icone de lixo na tela
     cartContainer.appendChild(card);
+    cartContainer.appendChild(trash);
+
+    // console.log(indice)
+
     // Função que pega o valor total dos produtos no carrinho
     selectQuantity.addEventListener("change", function () {
       valorQuantidade = parseInt(selectQuantity.value);
       valorTotal = valorQuantidade * arrayCarrinho[i].valor;
-      precoFinal.push(valorTotal);
-      selectQuantity.disabled = true;
+      precosProdArray.push(valorTotal);
 
-      let valorFinal = +precoFinal.reduce(
+      // Realizando o calculo dos valores do array
+      valorTotal = +precosProdArray.reduce(
         (total, currentElement) => total + currentElement
       );
-      console.log(valorFinal);
+
+      valorFinal = `${valorTotal.toFixed(2)}`;
+      subtotal.innerHTML = `R$ ${valorFinal}`;
+      totalCampo.innerHTML = `R$ ${valorFinal}`;
+      selectQuantity.disabled = true;
+    });
+
+    // Função que remove o card e o valor do prod do carrinho
+    trash.addEventListener("click", function () {
+      discountInput.value = "";
+      totalCampo.innerHTML = "";
+      card.style.display = "none";
+      trash.style.display = "none";
+      let indice = precosProdArray.indexOf(precosProdArray[i]);
+
+      precosProdArray[i] = precosProdArray[i] - precosProdArray[indice];
+
+      if (precosProdArray == "") {
+        discountPaymentContainer.style.display = "none";
+        cartContainer.appendChild(textCart);
+      } else {
+        valorFinal = 0;
+        valorFinal = +precosProdArray.reduce(
+          (total, currentElement) => total + currentElement
+        );
+        subtotal.innerHTML = `R$ ${valorFinal.toFixed(2)}`;
+        totalCampo.innerHTML = `R$ ${valorFinal.toFixed(2)}`;
+      }
+    });
+
+    // Aplicando o desconto se for passado o cupom.
+    discountInput.addEventListener("change", function () {
+      valorFinalDescontado = 0;
+      if (discountInput.value == "1") {
+        valorDesconto = (valorFinal / 100) * 5;
+      }
+      if (discountInput.value == "2") {
+        valorDesconto = (valorFinal / 100) * 10;
+      }
+      if (discountInput.value == "3") {
+        valorDesconto = (valorFinal / 100) * 15;
+      }
+      valorFinalDescontado = valorFinal - valorDesconto;
+      totalCampo.innerHTML = `R$ ${valorFinalDescontado.toFixed(2)}`;
     });
   }
-}
-
-function calculaPagamento(n1, n2, desc = 0, valorTotal) {
-  valorTotal = n1 * n2 - desc;
-  parseInt(valorTotal);
-  console.log(valorTotal);
 }
 
 // Direcionamentos
