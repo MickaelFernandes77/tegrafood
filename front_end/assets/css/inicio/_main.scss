@@ -188,18 +188,14 @@
 
     #filterModal {
       .modal-dialog {
-        font-family: "Poppins", sans-serif;
         .modal-content {
-          background-color: $color1;
           height: 180px;
           #modalTitle {
             margin-top: 20px;
           }
-
           .modal-body {
             display: flex;
             justify-content: center;
-
             .btnFilter {
               height: 40px;
               margin: 10px 0 0 10px;
@@ -207,7 +203,30 @@
               color: $color1;
             }
           }
+          .btnClose {
+            color: $color1;
+            background-color: $color2;
+            border: none;
+          }
+        }
+      }
+    }
 
+    #helpModal {
+      .modal-dialog {
+        .modal-content {
+          height: 300px;
+          #modalTitle {
+            color: $color2;
+          }
+          .modal-help-text {
+            color: #000;
+            .subtitles {
+              font-size: 18px;
+              color: $color3;
+              font-weight: bold;
+            }
+          }
           .btnClose {
             color: $color1;
             background-color: $color2;

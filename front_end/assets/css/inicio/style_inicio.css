@@ -191,25 +191,36 @@ body #elementsContainer {
             margin: 10px 35px 0 0;
             font-size: 18px;
             font-weight: 600; }
-    #elementsContainer main #filterModal .modal-dialog {
-      font-family: "Poppins", sans-serif; }
-      #elementsContainer main #filterModal .modal-dialog .modal-content {
-        background-color: #fff;
-        height: 180px; }
-        #elementsContainer main #filterModal .modal-dialog .modal-content #modalTitle {
-          margin-top: 20px; }
-        #elementsContainer main #filterModal .modal-dialog .modal-content .modal-body {
-          display: flex;
-          justify-content: center; }
-          #elementsContainer main #filterModal .modal-dialog .modal-content .modal-body .btnFilter {
-            height: 40px;
-            margin: 10px 0 0 10px;
-            background-color: #dc9000;
-            color: #fff; }
-        #elementsContainer main #filterModal .modal-dialog .modal-content .btnClose {
-          color: #fff;
+    #elementsContainer main #filterModal .modal-dialog .modal-content {
+      height: 180px; }
+      #elementsContainer main #filterModal .modal-dialog .modal-content #modalTitle {
+        margin-top: 20px; }
+      #elementsContainer main #filterModal .modal-dialog .modal-content .modal-body {
+        display: flex;
+        justify-content: center; }
+        #elementsContainer main #filterModal .modal-dialog .modal-content .modal-body .btnFilter {
+          height: 40px;
+          margin: 10px 0 0 10px;
           background-color: #dc9000;
-          border: none; }
+          color: #fff; }
+      #elementsContainer main #filterModal .modal-dialog .modal-content .btnClose {
+        color: #fff;
+        background-color: #dc9000;
+        border: none; }
+    #elementsContainer main #helpModal .modal-dialog .modal-content {
+      height: 300px; }
+      #elementsContainer main #helpModal .modal-dialog .modal-content #modalTitle {
+        color: #dc9000; }
+      #elementsContainer main #helpModal .modal-dialog .modal-content .modal-help-text {
+        color: #000; }
+        #elementsContainer main #helpModal .modal-dialog .modal-content .modal-help-text .subtitles {
+          font-size: 18px;
+          color: #223263;
+          font-weight: bold; }
+      #elementsContainer main #helpModal .modal-dialog .modal-content .btnClose {
+        color: #fff;
+        background-color: #dc9000;
+        border: none; }
 
 header {
   width: 100%;

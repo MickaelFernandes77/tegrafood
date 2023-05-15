@@ -102,7 +102,9 @@
                 <div class="row">
                     <section class="col-12 d-flex justify-content-end" id="userContainer">
                         <a href="../index.html" id="exit"><i class="fa-solid fa-door-open"></i></a>
-                        <p id="interrogation"><i class="fa-solid fa-circle-question"></i></p>
+                        <p id="interrogation" data-bs-toggle="modal" data-bs-target="#helpModal"><i
+                                class="fa-solid fa-circle-question"></i>
+                        </p>
                         <p id="bell"><i class="fa-solid fa-bell"></i></p>
                         <div id="userImage">
                         </div>
@@ -130,6 +132,35 @@
                     </section>
                 </div>
             </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="helpModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="d-flex justify-content-around">
+                            <h4 id="modalTitle">Como Usar</h4>
+                        </div>
+
+                        <div class="modal-body">
+                            <div>
+                                <p class="modal-help-text"><span class="subtitles">1° Adicionar produtos:</span> Clique
+                                    no botão adicionar e preencha
+                                    os campos para inserir um
+                                    produto.</p>
+                                <p class="modal-help-text"><span class="subtitles">2° Organizar os produtos em ordem
+                                        alfabética</span>: Clique no ícone
+                                    a-z e os produtos que
+                                    você adicionou serão organizados em ordem alfabética automaticamente.</p>
+                                <p class="modal-help-text"><span class="subtitles">3° Itens do Menu:</span> Para ver os
+                                    produtos em suas respectivas
+                                    categorias, basta clicar
+                                    na opção do menu que deseja visualizar.</p>
+                            </div>
+                        </div>
+
+                        <button class="btnClose" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
         </main>
     </section>
 

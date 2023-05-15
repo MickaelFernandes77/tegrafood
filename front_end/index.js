@@ -82,8 +82,6 @@ function login() {
       userArray[i].tipo == 2
     ) {
       window.location.href = "./view/main_client.html";
-    } else {
-      alert("Usuário ou senha incorretos");
     }
   }
 }
