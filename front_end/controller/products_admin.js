@@ -310,18 +310,15 @@ function filtraProdutos(n1, n2) {
     priceContainer.appendChild(buttonEdit);
     card.appendChild(productImageTitle);
     card.appendChild(priceContainer);
-    
-  if (n2 == 0) {
-    if (produtos[i].preco >= n1) {
+
+    if (n2 == 0) {
+      if (produtos[i].preco >= n1) {
+        productsContainer.appendChild(card);
+      }
+    } else if (produtos[i].preco >= n1 && produtos[i].preco <= n2) {
       productsContainer.appendChild(card);
     }
-  } else if (produtos[i].preco >= n1 && produtos[i].preco <= n2) {
-    productsContainer.appendChild(card);
   }
-
-  }
-  
-
 }
 
 // Direcionamentos

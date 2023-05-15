@@ -2,7 +2,7 @@ body {
   width: 100%;
   height: 100vh;
 
-  main {
+  #main_cadastro {
     width: 100%;
     height: 100%;
     display: flex;
@@ -19,7 +19,7 @@ body {
       }
     }
 
-    #login-container {
+    #cadastro-container {
       width: 50%;
       height: 100%;
       background-color: $color1;
@@ -37,7 +37,7 @@ body {
           text-align: center;
           padding-top: 20px;
         }
-
+        
         #title {
           color: $color3;
           font-size: 24px;
@@ -75,6 +75,13 @@ body {
             border: solid 1px $color4;
             border-radius: 5px;
 
+            #tipo_usuario {
+              width: 90%;
+              color: $color4;
+              border: none;
+              outline: none;
+            }
+
             .icon {
               font-size: 20px;
               margin: 10px 7px 0 20px;
@@ -82,7 +89,6 @@ body {
             }
 
             input {
-              width: 100%;
               color: $color4;
               border: none;
               outline: none;
@@ -92,7 +98,7 @@ body {
           #btn-container {
             display: flex;
             justify-content: center;
-            #button_entrar {
+            #button_cadastrar {
               color: $color1;
               background-color: $color2;
               border: none;
@@ -133,12 +139,12 @@ body {
             }
           }
 
-          #cadastro {
+          #login {
             font-family: "Poppins", sans-serif;
             margin-top: 10px;
             text-align: center;
 
-            #cadastro-link {
+            #login-link {
               font-weight: bold;
             }
           }

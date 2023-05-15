@@ -57,9 +57,10 @@ body #elementsContainer {
 #elementsContainer {
   display: flex;
   flex-direction: row;
-  width: 100%; }
+  width: 100%;
+  height: 350vh; }
   #elementsContainer main {
-    height: 1950px;
+    height: 100%;
     width: 78%;
     background-color: #fff; }
     #elementsContainer main #userContainer {
@@ -68,11 +69,13 @@ body #elementsContainer {
       #elementsContainer main #userContainer #interrogation,
       #elementsContainer main #userContainer #bell,
       #elementsContainer main #userContainer #cart,
+      #elementsContainer main #userContainer #exit,
       #elementsContainer main #userContainer #userImage {
         margin-right: 40px; }
       #elementsContainer main #userContainer #interrogation,
       #elementsContainer main #userContainer #bell,
-      #elementsContainer main #userContainer #cart {
+      #elementsContainer main #userContainer #cart,
+      #elementsContainer main #userContainer #exit {
         font-size: 22px;
         color: #fff;
         margin-top: 15px;
@@ -82,7 +85,7 @@ body #elementsContainer {
         height: 50px;
         margin-top: 10px;
         border-radius: 50px;
-        background-image: url("../../../images/user.jpg");
+        background-image: url("../../images/user.jpg");
         background-repeat: no-repeat;
         background-size: cover; }
     #elementsContainer main #sortContainer,
@@ -118,6 +121,7 @@ body #elementsContainer {
         #elementsContainer main #sortContainer #azContainer #az,
         #elementsContainer main #sortContainer #azContainer #filter {
           font-size: 22px;
+          text-decoration: none;
           color: #dc9000;
           margin: 50px 15px 0 0; }
         #elementsContainer main #sortContainer #azContainer #btnAdd {
@@ -228,10 +232,12 @@ header {
     height: 70px; }
     header #userContainerResponsive #interrogation,
     header #userContainerResponsive #bell,
+    header #userContainerResponsive #exit,
     header #userContainerResponsive #userImage {
       margin-right: 10px; }
     header #userContainerResponsive #interrogation,
-    header #userContainerResponsive #bell {
+    header #userContainerResponsive #bell,
+    header #userContainerResponsive #exit {
       font-size: 22px;
       color: #fff;
       margin-top: 15px;
@@ -241,7 +247,7 @@ header {
       height: 50px;
       margin-top: 10px;
       border-radius: 50px;
-      background-image: url("../../../images/user.jpg");
+      background-image: url("../../images/user.jpg");
       background-repeat: no-repeat;
       background-size: cover; }
 
@@ -271,7 +277,7 @@ header {
           margin-top: 15px !important; }
           #elementsContainer main #sortContainer #titleContainer #title,
           #elementsContainer main #sortContainer #titleContainer #title2 {
-            font-size: 22px;
+            font-size: 21px;
             margin-left: -10px;
             margin-right: 16px; }
         #elementsContainer main #sortContainer #azContainer {
@@ -284,12 +290,8 @@ header {
           #elementsContainer main #sortContainer #azContainer #btnAdd {
             font-size: 15px;
             width: 110px;
-            height: 50px;
-            margin-top: 10px; }
-      #elementsContainer main #filterContainer {
-        height: 90px; }
-        #elementsContainer main #filterContainer #azFilterContainer {
-          justify-content: center; }
+            height: 40px;
+            margin-top: 15px; }
       #elementsContainer main #productsContainer {
         height: 100%;
         width: 100%; }
@@ -385,8 +387,8 @@ header {
           #elementsContainer main #sortContainer #azContainer #btnAdd {
             font-size: 15px;
             width: 110px;
-            height: 50px;
-            margin-top: 10px; }
+            height: 40px;
+            margin-top: 15px; }
       #elementsContainer main #filterContainer {
         height: 90px; }
         #elementsContainer main #filterContainer #azFilterContainer {
@@ -463,6 +465,8 @@ header {
       width: 100%;
       height: 100%; }
       #elementsContainer main #userContainer {
+        display: none !important; }
+      #elementsContainer main #userContainerResponsive {
         display: none !important; }
       #elementsContainer main #sortContainer {
         height: 120px;

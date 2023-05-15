@@ -19,7 +19,7 @@ body {
       }
     }
 
-    #cadastro-container {
+    #login-cadastro-container {
       width: 50%;
       height: 100%;
       background-color: $color1;
@@ -30,21 +30,22 @@ body {
         margin-top: 7%;
         background-color: #fff;
 
-        #title,
-        #subtitle {
+        .title,
+        .subtitle {
           font-family: "Poppins", sans-serif;
           letter-spacing: 0.5px;
           text-align: center;
           padding-top: 20px;
         }
-        #title {
+
+        .title {
           color: $color3;
           font-size: 24px;
           font-weight: 700;
           line-height: 30px;
         }
 
-        #subtitle {
+        .subtitle {
           color: $color4;
           font-size: 16px;
           font-weight: 400;
@@ -52,7 +53,7 @@ body {
         }
       }
 
-      #form-container {
+      .form-container {
         width: 100%;
         height: 380px;
         background-color: $color1;
@@ -74,6 +75,13 @@ body {
             border: solid 1px $color4;
             border-radius: 5px;
 
+            #tipo_usuario {
+              width: 97%;
+              color: $color4;
+              border: none;
+              outline: none;
+            }
+
             .icon {
               font-size: 20px;
               margin: 10px 7px 0 20px;
@@ -81,6 +89,7 @@ body {
             }
 
             input {
+              width: 100%;
               color: $color4;
               border: none;
               outline: none;
@@ -90,6 +99,7 @@ body {
           #btn-container {
             display: flex;
             justify-content: center;
+            #button_entrar,
             #button_cadastrar {
               color: $color1;
               background-color: $color2;
@@ -131,9 +141,21 @@ body {
             }
           }
 
-          #login {
+          // Link de cadastro
+          #cadastro {
             font-family: "Poppins", sans-serif;
             margin-top: 10px;
+            text-align: center;
+
+            #cadastro-link {
+              font-weight: bold;
+            }
+          }
+
+          // Link de login
+          #login {
+            font-family: "Poppins", sans-serif;
+            margin-top: 25px;
             text-align: center;
 
             #login-link {
@@ -142,6 +164,8 @@ body {
           }
         }
       }
+      
+      #cadastro-form-container{display: none;}
     }
   }
 }

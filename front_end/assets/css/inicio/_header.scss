@@ -29,12 +29,14 @@ header {
 
     #interrogation,
     #bell,
+    #exit,
     #userImage {
       margin-right: 10px;
     }
 
     #interrogation,
-    #bell {
+    #bell,
+    #exit {
       font-size: 22px;
       color: $color1;
       margin-top: 15px;
@@ -46,7 +48,7 @@ header {
       height: 50px;
       margin-top: 10px;
       border-radius: 50px;
-      background-image: url("../../../images/user.jpg");
+      background-image: url("../../images/user.jpg");
       background-repeat: no-repeat;
       background-size: cover;
     }

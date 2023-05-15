@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Início Cliente</title>
     <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="../assets/css/admin/inicio/style_inicio.css">
-    <link rel="stylesheet" href="../assets/css/admin/carrinho/style_inicio.css">
+    <link rel="stylesheet" href="../assets/css/inicio/style_inicio.css">
+    <link rel="stylesheet" href="../assets/css/carrinho/style_inicio.css">
     <!-- link bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -101,6 +101,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <section class="col-12 d-flex justify-content-end" id="userContainer">
+                        <a href="../index.html" id="exit"><i class="fa-solid fa-door-open"></i></a>
                         <p id="cart" onclick="abrirTelaCarrinho()"><i class="fa-solid fa-cart-shopping"></i></p>
                         <p id="bell"><i class="fa-solid fa-bell"></i></p>
                         <div id="userImage">
@@ -159,6 +160,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <section class="col-12 d-flex justify-content-end" id="userContainer">
+                        <a href="../index.html" id="exit"><i class="fa-solid fa-door-open"></i></a>
                         <p id="shop" onclick="fecharTelaCarrinho()"><i class="fa-solid fa-shop"></i></p>
                         <p id="bell"><i class="fa-solid fa-bell"></i></p>
                         <div id="userImage">
@@ -174,7 +176,8 @@
 
                 <div class="row">
                     <section id="cartContainer">
-                        <p id="textCart">Seu carrinho está vazio. <br><br> <a href="#" id="addProd" onclick="fecharTelaCarrinho()">Adicionar
+                        <p id="textCart">Seu carrinho está vazio. <br><br> <a href="#" id="addProd"
+                                onclick="fecharTelaCarrinho()">Adicionar
                                 Produtos</a></p>
                     </section>
                 </div>
@@ -211,8 +214,8 @@
                         </section>
                     </div>
 
-                    <section id="closePurchaseContainer" class="d-none">
-                        <button>Escolher Mais</button><button>Fechar Pedido</button>
+                    <section id="closePurchaseContainer">
+                        <button id="fecharPedidoBtn">Fechar Pedido <i class="fa-solid fa-cart-shopping"></i></button>
                     </section>
                 </div>
             </div>

@@ -2,9 +2,10 @@
   display: flex;
   flex-direction: row;
   width: 100%;
+  height: 350vh;
 
   main {
-    height: 1950px;
+    height: 100%;
     width: 78%;
     background-color: $color1;
 
@@ -15,13 +16,15 @@
       #interrogation,
       #bell,
       #cart,
+      #exit,
       #userImage {
         margin-right: 40px;
       }
 
       #interrogation,
       #bell,
-      #cart {
+      #cart,
+      #exit {
         font-size: 22px;
         color: $color1;
         margin-top: 15px;
@@ -33,7 +36,7 @@
         height: 50px;
         margin-top: 10px;
         border-radius: 50px;
-        background-image: url("../../../images/user.jpg");
+        background-image: url("../../images/user.jpg");
         background-repeat: no-repeat;
         background-size: cover;
       }
@@ -80,6 +83,7 @@
         #az,
         #filter {
           font-size: 22px;
+          text-decoration: none;
           color: $color2;
           margin: 50px 15px 0 0;
         }
@@ -214,4 +218,3 @@
     }
   }
 }
-

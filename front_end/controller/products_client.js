@@ -7,6 +7,7 @@ let cartContainer = document.getElementById("cartContainer");
 let btnAdd = document.getElementById("btnAdd");
 let btnCadastro = document.getElementById("btnCadastrar");
 let btnCancelar = document.getElementById("btnCancelar");
+let btnFecharPedido = document.getElementById("fecharPedidoBtn");
 let az = document.getElementById("az");
 // Itens do Menu Lateral
 let todos = document.getElementById("todos");
@@ -187,6 +188,11 @@ az.addEventListener("click", function (e) {
   ordenaProdutos();
 });
 
+btnFecharPedido.addEventListener("click", function () {
+  alert("Pedido Realizado!");
+  paginaMainClient();
+});
+
 function carregaListaProdutos(categoria) {
   // Limpando a exibição dos produtos
   productsContainer.innerHTML = "";
@@ -360,6 +366,9 @@ function filtraProdutos(n1, n2) {
 function adicionaProdutoNoCarrinho(array) {
   let arrayCarrinho = array;
   cartContainer.innerHTML = "";
+  discountPaymentContainer.style.display = "flex";
+  btnFecharPedido.style.display = "block";
+  // Variaveis para calculos do preço a ser pago
   let valorTotal = 0;
   let valorFinal = 0;
   let valorDesconto = 0;
@@ -456,8 +465,6 @@ function adicionaProdutoNoCarrinho(array) {
     cartContainer.appendChild(card);
     cartContainer.appendChild(trash);
 
-    // console.log(indice)
-
     // Função que pega o valor total dos produtos no carrinho
     selectQuantity.addEventListener("change", function () {
       valorQuantidade = parseInt(selectQuantity.value);
@@ -485,16 +492,23 @@ function adicionaProdutoNoCarrinho(array) {
 
       precosProdArray[i] = precosProdArray[i] - precosProdArray[indice];
 
-      if (precosProdArray == "") {
+      valorFinal = 0;
+      valorFinal = +precosProdArray.reduce(
+        (total, currentElement) => total + currentElement
+      );
+      subtotal.innerHTML = `R$ ${valorFinal.toFixed(2)}`;
+      totalCampo.innerHTML = `R$ ${valorFinal.toFixed(2)}`;
+
+      if (valorFinal == 0) {
         discountPaymentContainer.style.display = "none";
-        cartContainer.appendChild(textCart);
-      } else {
-        valorFinal = 0;
-        valorFinal = +precosProdArray.reduce(
-          (total, currentElement) => total + currentElement
-        );
-        subtotal.innerHTML = `R$ ${valorFinal.toFixed(2)}`;
-        totalCampo.innerHTML = `R$ ${valorFinal.toFixed(2)}`;
+        btnFecharPedido.style.display = "none";
+        alert("Seu carrinho está vazio. adicione produtos");
+        paginaMainClient();
+      }
+
+      if (isNaN(valorFinal)) {
+        alert("Seu carrinho está vazio. adicione produtos");
+        paginaMainClient();
       }
     });
 
@@ -515,7 +529,6 @@ function adicionaProdutoNoCarrinho(array) {
     });
   }
 }
-
 // Direcionamentos
 function paginaAddProduto() {
   window.location.href = "../view/add_produto.html";
@@ -523,6 +536,10 @@ function paginaAddProduto() {
 
 function paginaMainAdmin() {
   window.location.href = "./main_admin.html";
+}
+
+function paginaMainClient() {
+  window.location.href = "./main_client.html";
 }
 
 function abrirTelaCarrinho() {

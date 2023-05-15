@@ -35,7 +35,7 @@
 
           #title,
           #title2 {
-            font-size: 22px;
+            font-size: 21px;
             margin-left: -10px;
             margin-right: 16px;
           }
@@ -54,17 +54,9 @@
           #btnAdd {
             font-size: 15px;
             width: 110px;
-            height: 50px;
-            margin-top: 10px;
+            height: 40px;
+            margin-top: 15px;
           }
-        }
-      }
-
-      #filterContainer {
-        height: 90px;
-
-        #azFilterContainer {
-          justify-content: center;
         }
       }
 
@@ -214,8 +206,8 @@
           #btnAdd {
             font-size: 15px;
             width: 110px;
-            height: 50px;
-            margin-top: 10px;
+            height: 40px;
+            margin-top: 15px;
           }
         }
       }
@@ -341,6 +333,10 @@
       height: 100%;
 
       #userContainer {
+        display: none !important;
+      }
+
+      #userContainerResponsive {
         display: none !important;
       }
 
