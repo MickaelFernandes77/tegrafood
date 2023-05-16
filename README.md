@@ -1,5 +1,5 @@
 <h1 align="center">
-<img src="./assets/images/logo.png">
+<img src="./front_end/assets/images/logo.png">
 <p>Compre os melhores lanches com a tegra!</p>
 </h1>
 
