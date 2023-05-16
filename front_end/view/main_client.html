@@ -8,7 +8,7 @@
     <title>Início Cliente</title>
     <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/inicio/style_inicio.css">
-    <link rel="stylesheet" href="../assets/css/carrinho/style_inicio.css">
+    <link rel="stylesheet" href="../assets/css/carrinho/style_carrinho.css">
     <!-- link bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -33,22 +33,22 @@
                 <div class="collapse navbar-collapse" id="menu-navegacao">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link todos" href="#" onclick="criaCardProduto('todos')">Todos</a>
+                            <a class="navLink todos" href="#">Todos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link pizza" href="#" onclick="criaCardProduto('pizza')">Pizza</a>
+                            <a class="navLink pizza" href="#">Pizza</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link sobremesa" href="#" onclick="criaCardProduto('sobremesa')">Sobremesa</a>
+                            <a class="navLink sobremesa" href="#">Sobremesa</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link lanche" href="#" onclick="criaCardProduto('lanche')">Lanche</a>
+                            <a class="navLink lanche" href="#">Lanche</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link acai" href="#" onclick="criaCardProduto('acai')">Açaí</a>
+                            <a class="navLink acai" href="#">Açaí</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link bebidas" href="#" onclick="criaCardProduto('bebidas')">Bebidas</a>
+                            <a class="navLink bebidas" href="#">Bebidas</a>
                         </li>
                     </ul>
                 </div>
@@ -57,7 +57,8 @@
             <div class="container-fluid">
                 <div class="row">
                     <section class="col-12 d-flex justify-content-end" id="userContainerResponsive">
-                        <p id="interrogation"><i class="fa-solid fa-circle-question"></i></p>
+                        <a id="exit" href="../index.html"><i class="fa-solid fa-door-open"></i></a>
+                        <p id="cart" onclick="abrirTelaCarrinho()"><i class="fa-solid fa-cart-shopping"></i></p>
                         <p id="bell"><i class="fa-solid fa-bell"></i></p>
                         <div id="userImage">
                         </div>
@@ -156,12 +157,12 @@
     </section>
 
     <section id="elementsContainerCart">
-        <main>
+        <section id="mainCart">
             <div class="container-fluid">
                 <div class="row">
-                    <section class="col-12 d-flex justify-content-end" id="userContainer">
+                    <section class="col-12 d-flex justify-content-end" id="userCartContainer">
                         <a href="../index.html" id="exit"><i class="fa-solid fa-door-open"></i></a>
-                        <p id="shop" onclick="fecharTelaCarrinho()"><i class="fa-solid fa-shop"></i></p>
+                        <p id="shop" class="escolher" onclick="fecharTelaCarrinho()"><i class="fa-solid fa-shop"></i></p>
                         <p id="bell"><i class="fa-solid fa-bell"></i></p>
                         <div id="userImage">
                         </div>
@@ -169,8 +170,8 @@
                 </div>
 
                 <div class="row">
-                    <section id="titleContainer">
-                        <h2 id="title">Meu Carrinho</h2>
+                    <section id="titleCartContainer">
+                        <h2 id="titleCart">Meu Carrinho</h2>
                     </section>
                 </div>
 
@@ -188,13 +189,12 @@
                             <h4 id="discountTitle" style="border: none;">Cupom de Desconto</h4>
                             <div id="discountInputContainer">
                                 <select name="#" id="discountInput">
-                                    <option value="">Selecione o Cupom</option>
+                                    <option value="0">Selecione</option>
                                     <option value="1">Cupom 1 (5%)</option>
                                     <option value="2">Cupom 2 (10%)</option>
                                     <option value="3">Cupom 3 (15%)</option>
                                 </select>
 
-                                <button class="btn" id="discountBtn">Adicionar</button>
                             </div>
                         </section>
 
@@ -215,11 +215,15 @@
                     </div>
 
                     <section id="closePurchaseContainer">
-                        <button id="fecharPedidoBtn">Fechar Pedido <i class="fa-solid fa-cart-shopping"></i></button>
+                        <div>
+                            <a href="#" id="escolher" class="escolher" onclick="fecharTelaCarrinho()">Escolher Mais</a>
+                            <button id="fecharPedidoBtn">Fechar Pedido <i
+                                    class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
                     </section>
                 </div>
             </div>
-        </main>
+        </section>
     </section>
 
     <script src="../controller/products_client.js"></script>

@@ -2,6 +2,7 @@
 let mainClientContainer = document.getElementById("elementsContainer");
 let mainCartContainer = document.getElementById("elementsContainerCart");
 let productsContainer = document.getElementById("productsContainer");
+let filterContainer = document.getElementById("filterContainer");
 let cartContainer = document.getElementById("cartContainer");
 // Botões das telas
 let btnAdd = document.getElementById("btnAdd");
@@ -9,6 +10,7 @@ let btnCadastro = document.getElementById("btnCadastrar");
 let btnCancelar = document.getElementById("btnCancelar");
 let btnFecharPedido = document.getElementById("fecharPedidoBtn");
 let az = document.getElementById("az");
+let escolher = document.getElementById("escolher");
 // Itens do Menu Lateral
 let todos = document.getElementById("todos");
 let pizza = document.getElementById("pizza");
@@ -32,6 +34,11 @@ let discountPaymentContainer = document.getElementById(
   "discountPaymentContainer"
 );
 let discountInput = document.getElementById("discountInput");
+// Variaveis para calculos do preço a ser pago
+let valorTotal = 0;
+let valorFinal = 0;
+let valorDesconto = 0;
+let valorFinalDescontado = 0;
 
 // Classe produto
 class Produto {
@@ -115,6 +122,7 @@ document.querySelectorAll(".todos").forEach((elemento) =>
     lanche.classList.remove("active");
     acai.classList.remove("active");
     bebidas.classList.remove("active");
+    fecharTelaCarrinho();
   })
 );
 
@@ -128,6 +136,7 @@ document.querySelectorAll(".pizza").forEach((elemento) =>
     lanche.classList.remove("active");
     acai.classList.remove("active");
     bebidas.classList.remove("active");
+    fecharTelaCarrinho();
   })
 );
 
@@ -141,6 +150,7 @@ document.querySelectorAll(".sobremesa").forEach((elemento) =>
     lanche.classList.remove("active");
     acai.classList.remove("active");
     bebidas.classList.remove("active");
+    fecharTelaCarrinho();
   })
 );
 
@@ -154,6 +164,7 @@ document.querySelectorAll(".lanche").forEach((elemento) =>
     sobremesa.classList.remove("active");
     acai.classList.remove("active");
     bebidas.classList.remove("active");
+    fecharTelaCarrinho();
   })
 );
 
@@ -167,6 +178,7 @@ document.querySelectorAll(".acai").forEach((elemento) =>
     sobremesa.classList.remove("active");
     lanche.classList.remove("active");
     bebidas.classList.remove("active");
+    fecharTelaCarrinho();
   })
 );
 
@@ -180,6 +192,7 @@ document.querySelectorAll(".bebidas").forEach((elemento) =>
     sobremesa.classList.remove("active");
     lanche.classList.remove("active");
     acai.classList.remove("active");
+    fecharTelaCarrinho();
   })
 );
 
@@ -188,11 +201,28 @@ az.addEventListener("click", function (e) {
   ordenaProdutos();
 });
 
+document.querySelectorAll(".escolher").forEach((elemento) =>
+  elemento.addEventListener("click", function () {
+    valorFinal = 0;
+    subtotal.innerHTML = `R$ ${valorFinal.toFixed(2)}`;
+    totalCampo.innerHTML = `R$ ${valorFinal.toFixed(2)}`;
+    for (let i = 0; i < precosProdArray.length; i++) {
+      precosProdArray[i] = 0;
+    }
+    fecharTelaCarrinho();
+  })
+);
+
 btnFecharPedido.addEventListener("click", function () {
-  alert("Pedido Realizado!");
-  paginaMainClient();
+  if (valorFinal != 0) {
+    alert("Pedido Realizado!");
+    paginaMainClient();
+  } else {
+    alert("Selecione a quantidade dos produtos que deseja comprar");
+  }
 });
 
+// exibe os produtos cadastrados na tela
 function carregaListaProdutos(categoria) {
   // Limpando a exibição dos produtos
   productsContainer.innerHTML = "";
@@ -368,11 +398,7 @@ function adicionaProdutoNoCarrinho(array) {
   cartContainer.innerHTML = "";
   discountPaymentContainer.style.display = "flex";
   btnFecharPedido.style.display = "block";
-  // Variaveis para calculos do preço a ser pago
-  let valorTotal = 0;
-  let valorFinal = 0;
-  let valorDesconto = 0;
-  let valorFinalDescontado = 0;
+  escolher.style.display = "block";
 
   for (let i = 0; i < arrayCarrinho.length; i++) {
     // Containers
@@ -396,7 +422,8 @@ function adicionaProdutoNoCarrinho(array) {
     var option7 = document.createElement("option");
     var option8 = document.createElement("option");
     var option9 = document.createElement("option");
-    let trash = document.createElement("p");
+    var trash = document.createElement("p");
+    var closeX = document.createElement("p");
     // Adicionando classes aos elementos
     card.classList.add("card");
     productImageTitle.classList.add("productImageTitle");
@@ -411,6 +438,9 @@ function adicionaProdutoNoCarrinho(array) {
     trash.classList.add("trash");
     trash.classList.add("fa-solid");
     trash.classList.add("fa-trash");
+    closeX.classList.add("closeX");
+    closeX.classList.add("fa-solid");
+    closeX.classList.add("fa-x");
     // Adicionando conteudo nos elementos
     var title = document.createTextNode(arrayCarrinho[i].nomeProd);
     var description = document.createTextNode(arrayCarrinho[i].descricao);
@@ -460,6 +490,7 @@ function adicionaProdutoNoCarrinho(array) {
     selectQuantity.appendChild(option8);
     selectQuantity.appendChild(option9);
     card.appendChild(productImageTitle);
+    card.appendChild(closeX);
     card.appendChild(priceContainer);
     // Adicionando card e icone de lixo na tela
     cartContainer.appendChild(card);
@@ -512,9 +543,41 @@ function adicionaProdutoNoCarrinho(array) {
       }
     });
 
+    closeX.addEventListener("click", function () {
+      discountInput.value = "";
+      totalCampo.innerHTML = "";
+      card.style.display = "none";
+      trash.style.display = "none";
+      let indice = precosProdArray.indexOf(precosProdArray[i]);
+
+      precosProdArray[i] = precosProdArray[i] - precosProdArray[indice];
+
+      valorFinal = 0;
+      valorFinal = +precosProdArray.reduce(
+        (total, currentElement) => total + currentElement
+      );
+      subtotal.innerHTML = `R$ ${valorFinal.toFixed(2)}`;
+      totalCampo.innerHTML = `R$ ${valorFinal.toFixed(2)}`;
+
+      if (valorFinal == 0) {
+        discountPaymentContainer.style.display = "none";
+        btnFecharPedido.style.display = "none";
+        alert("Seu carrinho está vazio. adicione produtos");
+        paginaMainClient();
+      }
+
+      if (isNaN(valorFinal)) {
+        alert("Seu carrinho está vazio. adicione produtos");
+        paginaMainClient();
+      }
+    });
+
     // Aplicando o desconto se for passado o cupom.
     discountInput.addEventListener("change", function () {
       valorFinalDescontado = 0;
+      if (discountInput.value == "0") {
+        valorDesconto = 0;
+      }
       if (discountInput.value == "1") {
         valorDesconto = (valorFinal / 100) * 5;
       }
@@ -530,14 +593,6 @@ function adicionaProdutoNoCarrinho(array) {
   }
 }
 // Direcionamentos
-function paginaAddProduto() {
-  window.location.href = "../view/add_produto.html";
-}
-
-function paginaMainAdmin() {
-  window.location.href = "./main_admin.html";
-}
-
 function paginaMainClient() {
   window.location.href = "./main_client.html";
 }
@@ -545,8 +600,11 @@ function paginaMainClient() {
 function abrirTelaCarrinho() {
   mainClientContainer.style.display = "none";
   mainCartContainer.style.display = "block";
+  filterContainer.style.display = "none";
 }
 
 function fecharTelaCarrinho() {
-  window.location.reload();
+  mainClientContainer.style.display = "flex";
+  filterContainer.style.display = "flex";
+  mainCartContainer.style.display = "none";
 }

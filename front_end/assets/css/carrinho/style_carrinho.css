@@ -1,0 +1,630 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/* esconder scrollbar no: chrome, safari, edge, opera */
+::-webkit-scrollbar {
+  display: none; }
+
+/* esconder scrollbar no: internet explorer*/
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  -ms-overflow-style: none; }
+
+/* esconder scrollbar no: firefox*/
+html {
+  scrollbar-width: none; }
+
+a {
+  text-decoration: none;
+  list-style: none;
+  outline: none; }
+
+#elementsContainerCart {
+  display: none;
+  flex-direction: row;
+  width: 100%; }
+  #elementsContainerCart #mainCart {
+    height: 1950px;
+    width: 100%;
+    background-color: #fff; }
+    #elementsContainerCart #mainCart #userCartContainer {
+      background-color: #dc9000;
+      height: 70px; }
+      #elementsContainerCart #mainCart #userCartContainer #bell,
+      #elementsContainerCart #mainCart #userCartContainer #shop,
+      #elementsContainerCart #mainCart #userCartContainer #exit,
+      #elementsContainerCart #mainCart #userCartContainer #userImage {
+        margin-right: 40px; }
+      #elementsContainerCart #mainCart #userCartContainer #bell,
+      #elementsContainerCart #mainCart #userCartContainer #shop,
+      #elementsContainerCart #mainCart #userCartContainer #exit {
+        font-size: 22px;
+        color: #fff;
+        margin-top: 15px;
+        cursor: pointer; }
+      #elementsContainerCart #mainCart #userCartContainer #userImage {
+        width: 50px;
+        height: 50px;
+        margin-top: 10px;
+        border-radius: 50px;
+        background-image: url("../../images/user.jpg");
+        background-repeat: no-repeat;
+        background-size: cover; }
+    #elementsContainerCart #mainCart #titleCartContainer #titleCart {
+      color: #223263;
+      font-family: "Poppins", sans-serif;
+      font-size: 22px;
+      font-weight: bold;
+      margin: 30px 0 0 10px; }
+    #elementsContainerCart #mainCart #cartContainer {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; }
+      #elementsContainerCart #mainCart #cartContainer #textCart {
+        display: block;
+        color: #dc9000;
+        font-family: "Poppins", sans-serif;
+        font-size: 20px;
+        margin: 30px 0 0 7px; }
+        #elementsContainerCart #mainCart #cartContainer #textCart #addProd {
+          color: #223263; }
+      #elementsContainerCart #mainCart #cartContainer .card {
+        height: 140px;
+        width: 90%;
+        margin-top: 25px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border: solid 1px #9098b1; }
+        #elementsContainerCart #mainCart #cartContainer .card .productImageTitle {
+          display: flex;
+          margin-top: 20px;
+          margin-left: 15px; }
+          #elementsContainerCart #mainCart #cartContainer .card .productImageTitle .productImg {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px; }
+          #elementsContainerCart #mainCart #cartContainer .card .productImageTitle .titleDescriptionContainer {
+            display: flex;
+            flex-direction: column; }
+            #elementsContainerCart #mainCart #cartContainer .card .productImageTitle .titleDescriptionContainer .cardTitle {
+              color: #223263;
+              font-weight: bold;
+              margin: 15px 0 0 20px; }
+            #elementsContainerCart #mainCart #cartContainer .card .productImageTitle .titleDescriptionContainer .cardDescription {
+              color: #223263;
+              margin: 3px 0 0 20px;
+              font-weight: 600; }
+        #elementsContainerCart #mainCart #cartContainer .card .priceContainer {
+          display: flex;
+          flex-direction: column; }
+          #elementsContainerCart #mainCart #cartContainer .card .priceContainer .price {
+            color: #223263;
+            font-size: 22px;
+            font-weight: bold;
+            margin: 30px 35px 0 0;
+            text-align: center; }
+          #elementsContainerCart #mainCart #cartContainer .card .priceContainer .btnPurchase,
+          #elementsContainerCart #mainCart #cartContainer .card .priceContainer .selectQuantity,
+          #elementsContainerCart #mainCart #cartContainer .card .priceContainer .confirmProduct {
+            width: 130px;
+            height: 45px;
+            color: #fff;
+            background-color: #dc9000;
+            margin: 10px 35px 0 0;
+            font-size: 18px;
+            font-weight: 600; }
+      #elementsContainerCart #mainCart #cartContainer .trash {
+        font-size: 24px;
+        margin: 85px 80px 0 0;
+        color: #223263;
+        cursor: pointer; }
+        #elementsContainerCart #mainCart #cartContainer .trash:hover {
+          color: #dc9000;
+          transition: 0.5s; }
+      #elementsContainerCart #mainCart #cartContainer .closeX {
+        display: none; }
+    #elementsContainerCart #mainCart #discountPaymentContainer {
+      display: none; }
+      #elementsContainerCart #mainCart #discountPaymentContainer #discountContainer {
+        height: 80px;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        border: solid 1px #9098b1;
+        border-radius: 5px;
+        font-family: "Poppins", sans-serif; }
+        #elementsContainerCart #mainCart #discountPaymentContainer #discountContainer #discountTitle {
+          color: #223263;
+          font-weight: 600;
+          font-size: 18px;
+          width: 40%;
+          margin: 30px 0 0 0; }
+        #elementsContainerCart #mainCart #discountPaymentContainer #discountContainer #discountInputContainer {
+          display: flex;
+          height: 100%;
+          margin-right: 10px; }
+          #elementsContainerCart #mainCart #discountPaymentContainer #discountContainer #discountInputContainer #discountInput {
+            height: 40px;
+            width: 400px;
+            margin-top: 20px;
+            padding-left: 10px;
+            border: solid 1px #9098b1;
+            border-radius: 5px; }
+      #elementsContainerCart #mainCart #discountPaymentContainer #paymentContainer {
+        width: 35%;
+        height: 180px;
+        color: #fff;
+        margin-left: 90px;
+        font-family: "Poppins", sans-serif; }
+        #elementsContainerCart #mainCart #discountPaymentContainer #paymentContainer table {
+          margin-top: 30px;
+          border: solid 1px #9098b1; }
+          #elementsContainerCart #mainCart #discountPaymentContainer #paymentContainer table tbody {
+            width: 100%; }
+            #elementsContainerCart #mainCart #discountPaymentContainer #paymentContainer table tbody tr {
+              width: 100%; }
+              #elementsContainerCart #mainCart #discountPaymentContainer #paymentContainer table tbody tr td {
+                width: 50%;
+                font-size: 22px;
+                font-weight: bold;
+                border-left: solid 1px #9098b1; }
+              #elementsContainerCart #mainCart #discountPaymentContainer #paymentContainer table tbody tr #subtotal,
+              #elementsContainerCart #mainCart #discountPaymentContainer #paymentContainer table tbody tr #total {
+                color: #223263;
+                text-align: right; }
+    #elementsContainerCart #mainCart #closePurchaseContainer {
+      height: 60px;
+      font-family: "Poppins", sans-serif; }
+      #elementsContainerCart #mainCart #closePurchaseContainer div {
+        display: flex;
+        justify-content: flex-end; }
+        #elementsContainerCart #mainCart #closePurchaseContainer div #escolher {
+          display: none;
+          color: #223263;
+          width: 150px;
+          padding-top: 20px; }
+        #elementsContainerCart #mainCart #closePurchaseContainer div #fecharPedidoBtn {
+          display: none;
+          height: 38px;
+          width: 170px;
+          color: #fff;
+          background-color: #dc9000;
+          border: none;
+          margin-top: 10px;
+          border-radius: 5px; }
+
+@media (max-width: 485px) {
+  #elementsContainerCart #mainCart #userCartContainer {
+    display: none !important; }
+  #elementsContainerCart #mainCart #cartContainer {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    #elementsContainerCart #mainCart #cartContainer .card {
+      height: 380px;
+      width: 100%;
+      margin-top: 15px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      #elementsContainerCart #mainCart #cartContainer .card .productImageTitle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        #elementsContainerCart #mainCart #cartContainer .card .productImageTitle .productImg {
+          width: 90px;
+          height: 90px;
+          border-radius: 50px; }
+        #elementsContainerCart #mainCart #cartContainer .card .productImageTitle .titleDescriptionContainer {
+          display: flex;
+          flex-direction: column; }
+          #elementsContainerCart #mainCart #cartContainer .card .productImageTitle .titleDescriptionContainer .cardTitle {
+            margin: 15px 0 0 0;
+            text-align: center; }
+          #elementsContainerCart #mainCart #cartContainer .card .productImageTitle .titleDescriptionContainer .cardDescription {
+            text-align: center;
+            margin: 35px 0 0 0; }
+      #elementsContainerCart #mainCart #cartContainer .card .priceContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        #elementsContainerCart #mainCart #cartContainer .card .priceContainer .price {
+          margin: 0 0 0 0;
+          text-align: center; }
+        #elementsContainerCart #mainCart #cartContainer .card .priceContainer .selectQuantity,
+        #elementsContainerCart #mainCart #cartContainer .card .priceContainer .confirmProduct {
+          width: 150px;
+          height: 45px;
+          margin: 10px 0 30px 0; }
+    #elementsContainerCart #mainCart #cartContainer .closeX {
+      display: block;
+      position: absolute;
+      margin: 15px 0 0 90%; }
+    #elementsContainerCart #mainCart #cartContainer .trash {
+      display: none; }
+  #elementsContainerCart #mainCart #discountPaymentContainer {
+    flex-direction: column; }
+    #elementsContainerCart #mainCart #discountPaymentContainer #discountContainer {
+      height: 100px;
+      width: 100%;
+      display: flex;
+      justify-content: center; }
+      #elementsContainerCart #mainCart #discountPaymentContainer #discountContainer #discountInputContainer {
+        display: flex;
+        height: 100%;
+        margin-right: 10px; }
+        #elementsContainerCart #mainCart #discountPaymentContainer #discountContainer #discountInputContainer #discountInput {
+          height: 60px;
+          width: 150px;
+          padding-left: 10px; }
+    #elementsContainerCart #mainCart #discountPaymentContainer #paymentContainer {
+      width: 100%;
+      margin-left: 0; }
+  #elementsContainerCart #mainCart #closePurchaseContainer div {
+    display: flex;
+    justify-content: space-around; }
+    #elementsContainerCart #mainCart #closePurchaseContainer div #escolher {
+      display: none;
+      color: #223263;
+      width: 150px;
+      padding-top: 20px; }
+    #elementsContainerCart #mainCart #closePurchaseContainer div #fecharPedidoBtn {
+      display: none;
+      height: 45px;
+      width: 50%;
+      margin-top: 10px; } }
+@media (min-width: 486px) and (max-width: 575px) {
+  #elementsContainerCart #mainCart #userCartContainer {
+    display: none !important; }
+  #elementsContainerCart #mainCart #cartContainer {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    #elementsContainerCart #mainCart #cartContainer .card {
+      height: 180px;
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+      #elementsContainerCart #mainCart #cartContainer .card .productImageTitle {
+        display: flex;
+        flex-direction: row; }
+        #elementsContainerCart #mainCart #cartContainer .card .productImageTitle .productImg {
+          width: 80px;
+          height: 80px;
+          margin-left: -8px;
+          margin-top: 20px;
+          border-radius: 50px; }
+        #elementsContainerCart #mainCart #cartContainer .card .productImageTitle .titleDescriptionContainer {
+          display: flex;
+          flex-direction: column; }
+          #elementsContainerCart #mainCart #cartContainer .card .productImageTitle .titleDescriptionContainer .cardTitle {
+            margin: 25px 0 0 10px; }
+          #elementsContainerCart #mainCart #cartContainer .card .productImageTitle .titleDescriptionContainer .cardDescription {
+            margin: 10px 0 0 5px; }
+      #elementsContainerCart #mainCart #cartContainer .card .priceContainer {
+        display: flex;
+        flex-direction: column;
+        margin-right: 10px; }
+        #elementsContainerCart #mainCart #cartContainer .card .priceContainer .price {
+          margin: 45px 0 0 0;
+          text-align: center; }
+        #elementsContainerCart #mainCart #cartContainer .card .priceContainer .selectQuantity,
+        #elementsContainerCart #mainCart #cartContainer .card .priceContainer .confirmProduct {
+          width: 120px;
+          height: 38px;
+          margin: 10px 0 30px 0; }
+    #elementsContainerCart #mainCart #cartContainer .closeX {
+      display: block;
+      position: absolute;
+      margin: 15px 0 0 95%; }
+    #elementsContainerCart #mainCart #cartContainer .trash {
+      display: none; }
+  #elementsContainerCart #mainCart #discountPaymentContainer {
+    flex-direction: column; }
+    #elementsContainerCart #mainCart #discountPaymentContainer #discountContainer {
+      height: 80px;
+      width: 100%;
+      display: flex;
+      justify-content: center; }
+      #elementsContainerCart #mainCart #discountPaymentContainer #discountContainer #discountInputContainer {
+        display: flex;
+        height: 100%;
+        margin-right: 10px; }
+        #elementsContainerCart #mainCart #discountPaymentContainer #discountContainer #discountInputContainer #discountInput {
+          height: 30px;
+          width: 240px;
+          margin-top: 26px;
+          padding-left: 10px; }
+    #elementsContainerCart #mainCart #discountPaymentContainer #paymentContainer {
+      width: 60%;
+      margin-left: auto; }
+  #elementsContainerCart #mainCart #closePurchaseContainer div {
+    display: flex;
+    justify-content: space-around; }
+    #elementsContainerCart #mainCart #closePurchaseContainer div #escolher {
+      display: none;
+      color: #223263;
+      width: 150px;
+      padding-top: 20px; }
+    #elementsContainerCart #mainCart #closePurchaseContainer div #fecharPedidoBtn {
+      display: none;
+      height: 45px;
+      width: 50%;
+      margin-top: 10px; } }
+@media (min-width: 576px) and (max-width: 767px) {
+  #elementsContainerCart #mainCart #cartContainer {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    #elementsContainerCart #mainCart #cartContainer .card {
+      height: 180px;
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+      #elementsContainerCart #mainCart #cartContainer .card .productImageTitle {
+        display: flex;
+        flex-direction: row; }
+        #elementsContainerCart #mainCart #cartContainer .card .productImageTitle .productImg {
+          width: 80px;
+          height: 80px;
+          margin-left: -8px;
+          margin-top: 20px;
+          border-radius: 50px; }
+        #elementsContainerCart #mainCart #cartContainer .card .productImageTitle .titleDescriptionContainer {
+          display: flex;
+          flex-direction: column; }
+          #elementsContainerCart #mainCart #cartContainer .card .productImageTitle .titleDescriptionContainer .cardTitle {
+            margin: 25px 0 0 10px; }
+          #elementsContainerCart #mainCart #cartContainer .card .productImageTitle .titleDescriptionContainer .cardDescription {
+            margin: 10px 0 0 5px; }
+      #elementsContainerCart #mainCart #cartContainer .card .priceContainer {
+        display: flex;
+        flex-direction: column;
+        margin-right: 10px; }
+        #elementsContainerCart #mainCart #cartContainer .card .priceContainer .price {
+          margin: 45px 0 0 0;
+          text-align: center; }
+        #elementsContainerCart #mainCart #cartContainer .card .priceContainer .selectQuantity,
+        #elementsContainerCart #mainCart #cartContainer .card .priceContainer .confirmProduct {
+          width: 120px;
+          height: 38px;
+          margin: 10px 0 30px 0; }
+    #elementsContainerCart #mainCart #cartContainer .closeX {
+      display: block;
+      position: absolute;
+      margin: 15px 0 0 95%; }
+    #elementsContainerCart #mainCart #cartContainer .trash {
+      display: none; }
+  #elementsContainerCart #mainCart #discountPaymentContainer {
+    flex-direction: column; }
+    #elementsContainerCart #mainCart #discountPaymentContainer #discountContainer {
+      height: 80px;
+      width: 100%;
+      display: flex;
+      justify-content: center; }
+      #elementsContainerCart #mainCart #discountPaymentContainer #discountContainer #discountInputContainer {
+        display: flex;
+        height: 100%;
+        margin-right: 10px; }
+        #elementsContainerCart #mainCart #discountPaymentContainer #discountContainer #discountInputContainer #discountInput {
+          height: 30px;
+          width: 240px;
+          margin-top: 26px;
+          padding-left: 10px; }
+    #elementsContainerCart #mainCart #discountPaymentContainer #paymentContainer {
+      width: 60%;
+      margin-left: auto; }
+  #elementsContainerCart #mainCart #closePurchaseContainer div {
+    display: flex;
+    justify-content: space-around; }
+    #elementsContainerCart #mainCart #closePurchaseContainer div #escolher {
+      display: none;
+      color: #223263;
+      width: 150px;
+      padding-top: 20px; }
+    #elementsContainerCart #mainCart #closePurchaseContainer div #fecharPedidoBtn {
+      display: none;
+      height: 45px;
+      width: 50%;
+      margin-top: 10px; } }
+@media (min-width: 768px) and (max-width: 990px) {
+  #elementsContainerCart #mainCart #cartContainer {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    #elementsContainerCart #mainCart #cartContainer .card {
+      height: 180px;
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+      #elementsContainerCart #mainCart #cartContainer .card .productImageTitle {
+        display: flex;
+        flex-direction: row; }
+        #elementsContainerCart #mainCart #cartContainer .card .productImageTitle .productImg {
+          width: 80px;
+          height: 80px;
+          margin-left: -8px;
+          margin-top: 20px;
+          border-radius: 50px; }
+        #elementsContainerCart #mainCart #cartContainer .card .productImageTitle .titleDescriptionContainer {
+          display: flex;
+          flex-direction: column; }
+          #elementsContainerCart #mainCart #cartContainer .card .productImageTitle .titleDescriptionContainer .cardTitle {
+            margin: 25px 0 0 10px; }
+          #elementsContainerCart #mainCart #cartContainer .card .productImageTitle .titleDescriptionContainer .cardDescription {
+            margin: 10px 0 0 5px; }
+      #elementsContainerCart #mainCart #cartContainer .card .priceContainer {
+        display: flex;
+        flex-direction: column;
+        margin-right: 10px; }
+        #elementsContainerCart #mainCart #cartContainer .card .priceContainer .price {
+          margin: 45px 0 0 0;
+          text-align: center; }
+        #elementsContainerCart #mainCart #cartContainer .card .priceContainer .selectQuantity,
+        #elementsContainerCart #mainCart #cartContainer .card .priceContainer .confirmProduct {
+          width: 120px;
+          height: 38px;
+          margin: 10px 0 30px 0; }
+    #elementsContainerCart #mainCart #cartContainer .closeX {
+      display: block;
+      position: absolute;
+      margin: 15px 0 0 95%; }
+    #elementsContainerCart #mainCart #cartContainer .trash {
+      display: none; }
+  #elementsContainerCart #mainCart #discountPaymentContainer #discountContainer {
+    height: 80px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    border: solid 1px #9098b1;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif; }
+    #elementsContainerCart #mainCart #discountPaymentContainer #discountContainer #discountTitle {
+      margin: 20px 0 0 0; }
+    #elementsContainerCart #mainCart #discountPaymentContainer #discountContainer #discountInputContainer {
+      display: flex;
+      height: 100%;
+      margin-right: 10px; }
+      #elementsContainerCart #mainCart #discountPaymentContainer #discountContainer #discountInputContainer #discountInput {
+        height: 40px;
+        width: 250px;
+        margin-top: 20px;
+        padding-left: 10px;
+        border: solid 1px #9098b1;
+        border-radius: 5px; }
+  #elementsContainerCart #mainCart #closePurchaseContainer {
+    height: 60px;
+    font-family: "Poppins", sans-serif; }
+    #elementsContainerCart #mainCart #closePurchaseContainer div {
+      display: flex;
+      justify-content: flex-end; }
+      #elementsContainerCart #mainCart #closePurchaseContainer div #escolher {
+        display: none;
+        color: #223263;
+        width: 150px;
+        padding-top: 20px; }
+      #elementsContainerCart #mainCart #closePurchaseContainer div #fecharPedidoBtn {
+        display: none;
+        height: 38px;
+        width: 170px;
+        color: #fff;
+        background-color: #dc9000;
+        border: none;
+        margin-top: 10px;
+        border-radius: 5px; } }
+@media (min-width: 991px) and (max-width: 1200px) {
+  #elementsContainerCart #mainCart #cartContainer {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    #elementsContainerCart #mainCart #cartContainer .card {
+      width: 85%; }
+    #elementsContainerCart #mainCart #cartContainer .closeX {
+      display: none; }
+    #elementsContainerCart #mainCart #cartContainer .trash {
+      display: block; }
+  #elementsContainerCart #mainCart #discountPaymentContainer #discountContainer {
+    height: 100px;
+    width: 50%; }
+    #elementsContainerCart #mainCart #discountPaymentContainer #discountContainer #discountTitle {
+      margin: 32px 0 0 0; }
+    #elementsContainerCart #mainCart #discountPaymentContainer #discountContainer #discountInputContainer {
+      display: flex;
+      height: 100%;
+      margin-right: 10px; }
+      #elementsContainerCart #mainCart #discountPaymentContainer #discountContainer #discountInputContainer #discountInput {
+        height: 40px;
+        width: 250px;
+        margin-top: 30px;
+        padding-left: 10px; }
+  #elementsContainerCart #mainCart #closePurchaseContainer {
+    height: 60px; }
+    #elementsContainerCart #mainCart #closePurchaseContainer div {
+      display: flex;
+      justify-content: flex-end; }
+      #elementsContainerCart #mainCart #closePurchaseContainer div #escolher {
+        display: none;
+        color: #223263;
+        width: 150px;
+        padding-top: 20px; }
+      #elementsContainerCart #mainCart #closePurchaseContainer div #fecharPedidoBtn {
+        display: none;
+        height: 38px;
+        width: 170px;
+        color: #fff;
+        background-color: #dc9000;
+        border: none;
+        margin-top: 10px;
+        border-radius: 5px; } }
+@media (min-width: 1201px) and (max-width: 1439px) {
+  #elementsContainerCart #mainCart #cartContainer {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    #elementsContainerCart #mainCart #cartContainer .closeX {
+      display: none; }
+    #elementsContainerCart #mainCart #cartContainer .trash {
+      display: block; }
+  #elementsContainerCart #mainCart #discountPaymentContainer #discountContainer {
+    height: 100px;
+    width: 50%; }
+    #elementsContainerCart #mainCart #discountPaymentContainer #discountContainer #discountTitle {
+      margin: 40px 0 0 0; }
+    #elementsContainerCart #mainCart #discountPaymentContainer #discountContainer #discountInputContainer {
+      display: flex;
+      height: 100%;
+      margin-right: 10px; }
+      #elementsContainerCart #mainCart #discountPaymentContainer #discountContainer #discountInputContainer #discountInput {
+        height: 40px;
+        width: 250px;
+        margin-top: 30px;
+        padding-left: 10px; }
+  #elementsContainerCart #mainCart #closePurchaseContainer {
+    height: 60px; }
+    #elementsContainerCart #mainCart #closePurchaseContainer div {
+      display: flex;
+      justify-content: flex-end; }
+      #elementsContainerCart #mainCart #closePurchaseContainer div #escolher {
+        display: none;
+        color: #223263;
+        width: 150px;
+        padding-top: 20px; }
+      #elementsContainerCart #mainCart #closePurchaseContainer div #fecharPedidoBtn {
+        display: none;
+        height: 38px;
+        width: 170px;
+        color: #fff;
+        background-color: #dc9000;
+        border: none;
+        margin-top: 10px;
+        border-radius: 5px; } }
+
+/*# sourceMappingURL=style_carrinho.css.map */

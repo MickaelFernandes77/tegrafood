@@ -58,7 +58,7 @@ body #elementsContainer {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 350vh; }
+  height: 250vh; }
   #elementsContainer main {
     height: 100%;
     width: 78%;
@@ -233,20 +233,22 @@ header {
     header nav #btn-menu {
       display: none;
       margin: 10px 0 0 20px; }
-    header nav .nav-link {
+    header nav .navLink {
       color: #fff;
       margin-left: 20px; }
+      header nav .navLink:hover {
+        text-decoration: underline; }
     header nav a {
       text-decoration: none; }
   header #userContainerResponsive {
     background-color: #dc9000;
     height: 70px; }
-    header #userContainerResponsive #interrogation,
+    header #userContainerResponsive #cart,
     header #userContainerResponsive #bell,
     header #userContainerResponsive #exit,
     header #userContainerResponsive #userImage {
       margin-right: 10px; }
-    header #userContainerResponsive #interrogation,
+    header #userContainerResponsive #cart,
     header #userContainerResponsive #bell,
     header #userContainerResponsive #exit {
       font-size: 22px;
@@ -339,7 +341,7 @@ header {
             #elementsContainer main #productsContainer .card .priceContainer .price {
               margin: 0 0 0 0;
               text-align: center; }
-            #elementsContainer main #productsContainer .card .priceContainer .btnEdit {
+            #elementsContainer main #productsContainer .card .priceContainer .btnEdit, #elementsContainer main #productsContainer .card .priceContainer .btnPurchase {
               width: 150px;
               height: 45px;
               margin: 10px 0 30px 0; }
@@ -443,7 +445,7 @@ header {
             #elementsContainer main #productsContainer .card .priceContainer .price {
               margin: 0 0 0 0;
               text-align: center; }
-            #elementsContainer main #productsContainer .card .priceContainer .btnEdit {
+            #elementsContainer main #productsContainer .card .priceContainer .btnEdit, #elementsContainer main #productsContainer .card .priceContainer .btnPurchase {
               width: 200px;
               height: 45px;
               margin: 10px 0 30px 0; }
@@ -547,7 +549,7 @@ header {
             #elementsContainer main #productsContainer .card .priceContainer .price {
               margin: 0 0 0 0;
               text-align: center; }
-            #elementsContainer main #productsContainer .card .priceContainer .btnEdit {
+            #elementsContainer main #productsContainer .card .priceContainer .btnEdit, #elementsContainer main #productsContainer .card .priceContainer .btnPurchase {
               width: 200px;
               height: 45px;
               margin: 10px 0 30px 0; }
@@ -645,7 +647,7 @@ header {
             #elementsContainer main #productsContainer .card .priceContainer .price {
               margin: 30px 0 0 0;
               text-align: center; }
-            #elementsContainer main #productsContainer .card .priceContainer .btnEdit {
+            #elementsContainer main #productsContainer .card .priceContainer .btnEdit, #elementsContainer main #productsContainer .card .priceContainer .btnPurchase {
               width: 100px;
               height: 40px;
               margin: 10px 0 30px 0; }
@@ -743,7 +745,7 @@ header {
             #elementsContainer main #productsContainer .card .priceContainer .price {
               margin: 30px 0 0 0;
               text-align: center; }
-            #elementsContainer main #productsContainer .card .priceContainer .btnEdit {
+            #elementsContainer main #productsContainer .card .priceContainer .btnEdit, #elementsContainer main #productsContainer .card .priceContainer .btnPurchase {
               width: 100px;
               height: 40px;
               margin: 10px 0 30px 0; }
@@ -823,7 +825,7 @@ header {
             #elementsContainer main #productsContainer .card .priceContainer .price {
               margin: 30px 0 0 0;
               text-align: center; }
-            #elementsContainer main #productsContainer .card .priceContainer .btnEdit {
+            #elementsContainer main #productsContainer .card .priceContainer .btnEdit, #elementsContainer main #productsContainer .card .priceContainer .btnPurchase {
               width: 100px;
               height: 40px;
               margin: 10px 0 30px 0; } }

@@ -13,9 +13,12 @@ header {
       margin: 10px 0 0 20px;
     }
 
-    .nav-link {
+    .navLink {
       color: $color1;
       margin-left: 20px;
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     a {
@@ -27,14 +30,14 @@ header {
     background-color: $color2;
     height: 70px;
 
-    #interrogation,
+    #cart,
     #bell,
     #exit,
     #userImage {
       margin-right: 10px;
     }
 
-    #interrogation,
+    #cart,
     #bell,
     #exit {
       font-size: 22px;

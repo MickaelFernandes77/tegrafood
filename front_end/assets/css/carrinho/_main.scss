@@ -3,23 +3,25 @@
   flex-direction: row;
   width: 100%;
 
-  main {
+  #mainCart {
     height: 1950px;
     width: 100%;
     background-color: $color1;
 
-    #userContainer {
+    #userCartContainer {
       background-color: $color2;
       height: 70px;
 
       #bell,
       #shop,
+      #exit,
       #userImage {
         margin-right: 40px;
       }
 
       #bell,
-      #shop {
+      #shop,
+      #exit {
         font-size: 22px;
         color: $color1;
         margin-top: 15px;
@@ -37,8 +39,8 @@
       }
     }
 
-    #titleContainer {
-      #title {
+    #titleCartContainer {
+      #titleCart {
         color: $color3;
         font-family: "Poppins", sans-serif;
         font-size: 22px;
@@ -49,6 +51,7 @@
 
     #cartContainer {
       height: 100%;
+      width: 100%;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -115,7 +118,6 @@
             text-align: center;
           }
 
-          .btnEdit,
           .btnPurchase,
           .selectQuantity,
           .confirmProduct {
@@ -141,10 +143,13 @@
           transition: 0.5s;
         }
       }
+
+      .closeX {
+        display: none;
+      }
     }
 
     #discountPaymentContainer {
-      // display: flex;
       display: none;
       #discountContainer {
         height: 80px;
@@ -173,17 +178,9 @@
             height: 40px;
             width: 400px;
             margin-top: 20px;
+            padding-left: 10px;
             border: solid 1px $color4;
             border-radius: 5px;
-          }
-
-          #discountBtn {
-            height: 40px;
-            color: $color1;
-            background-color: $color2;
-            position: absolute;
-            margin-top: 20px;
-            margin-left: 300px;
           }
         }
       }
@@ -197,7 +194,6 @@
         table {
           margin-top: 30px;
           border: solid 1px $color4;
-          border-radius: 5px;
           tbody {
             width: 100%;
             tr {
@@ -224,16 +220,27 @@
       height: 60px;
       font-family: "Poppins", sans-serif;
 
-      #fecharPedidoBtn {
-        display: none;
-        height: 38px;
-        width: 170px;
-        color: $color1;
-        background-color: $color2;
-        border: none;
-        margin-left: 80%;
-        margin-top: 10px;
-        border-radius: 5px;
+      div {
+        display: flex;
+        justify-content: flex-end;
+        
+        #escolher {
+          display: none;
+          color: $color3;
+          width: 150px;
+          padding-top: 20px;
+        }
+
+        #fecharPedidoBtn {
+          display: none;
+          height: 38px;
+          width: 170px;
+          color: $color1;
+          background-color: $color2;
+          border: none;
+          margin-top: 10px;
+          border-radius: 5px;
+        }
       }
     }
   }
