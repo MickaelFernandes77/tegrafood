@@ -46,9 +46,6 @@ Você pode cadastrar um novo usuário para acessar o sistema. Para cadastrar um 
 #### Campo Confirmar senha: Sua senha
 #### Campo Tipo: 1(Administrador) ou 2(Cliente)
 
-#### Campo Senha: 12345
-
-#### Campo Senha: 12345
 ## 🖥️ Telas
 
 🧑📖 Administrador:
