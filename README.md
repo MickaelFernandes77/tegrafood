@@ -37,6 +37,18 @@ Para acessar o sistema, você tem 2 opções.
 
 #### Campo Senha: 12345
 
+### Cadastro:
+
+Você pode cadastrar um novo usuário para acessar o sistema. Para cadastrar um novo usuário, preencha os 5 campos:
+#### Campo Nome Completo: Seu nome completo
+#### Campo E-mail: Seu e-mail
+#### Campo Senha: Sua senha
+#### Campo Confirmar senha: Sua senha
+#### Campo Tipo: 1(Administrador) ou 2(Cliente)
+
+#### Campo Senha: 12345
+
+#### Campo Senha: 12345
 ## 🖥️ Telas
 
 🧑📖 Administrador:
